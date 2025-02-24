@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Users\Michał\source\repos\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\net8.0-windows\
+D:\Users\Michał\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\net8.0-windows\
 Odkrywcy_WorldMap
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\Users\Michał\source\repos\Odkrywcy_WorldMap\Odkrywcy_WorldMap\App.xaml
-2-966561418
-
-41673597135
+D:\Users\Michał\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\App.xaml
+21150886422
+11452893533
+4582545732
 198-635017904
-MainWindow.xaml;Xaml\WorldMap.xaml;
+WorldMap.xaml;Xaml\WorldMap.xaml;
 
 False
 

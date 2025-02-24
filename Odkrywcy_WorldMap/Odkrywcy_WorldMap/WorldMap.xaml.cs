@@ -1,16 +1,26 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
-using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.Windows.Input;
 
 namespace Odkrywcy_WorldMap
 {
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Logika interakcji dla klasy WorldMap.xaml
+    /// </summary>
+    public partial class WorldMap : Window
     {
-        public MainWindow()
+        public WorldMap()
         {
             InitializeComponent();
         }
@@ -70,6 +80,12 @@ namespace Odkrywcy_WorldMap
                 scaleTransform.BeginAnimation(ScaleTransform.ScaleXProperty, scaleAnimation);
                 scaleTransform.BeginAnimation(ScaleTransform.ScaleYProperty, scaleAnimation);
             }
+        }
+
+        private void BackgroundVideo_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            BackgroundVideo.Position = TimeSpan.Zero; // Resetuj czas filmu
+            BackgroundVideo.Play(); // Odtwórz ponownie
         }
     }
 }
