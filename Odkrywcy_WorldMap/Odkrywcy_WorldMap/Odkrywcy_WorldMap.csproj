@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <None Remove="Images\mapa_swiata.jpg" />
+    <None Remove="Images\odkrywcy.jpg" />
     <None Remove="Video\sea.mp4" />
   </ItemGroup>
 
@@ -19,6 +20,9 @@
 
   <ItemGroup>
     <Resource Include="Images\mapa_swiata.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\odkrywcy.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Content Include="Video\sea.mp4">
