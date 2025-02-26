@@ -1,13 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Users\\Micha\u0142\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\",
+  "WorkspaceRootPath": "C:\\Users\\admin\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{988A6898-1CC1-4B0B-B621-A85492B65195}|Odkrywcy_WorldMap\\Odkrywcy_WorldMap.csproj|d:\\users\\micha\u0142\\desktop\\odkrywcy\\odkrywcy_worldmap\\odkrywcy_worldmap\\worldmap.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{988A6898-1CC1-4B0B-B621-A85492B65195}|Odkrywcy_WorldMap\\Odkrywcy_WorldMap.csproj|c:\\users\\admin\\desktop\\odkrywcy\\odkrywcy_worldmap\\odkrywcy_worldmap\\worldmap.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{988A6898-1CC1-4B0B-B621-A85492B65195}|Odkrywcy_WorldMap\\Odkrywcy_WorldMap.csproj|solutionrelative:odkrywcy_worldmap\\worldmap.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{988A6898-1CC1-4B0B-B621-A85492B65195}|Odkrywcy_WorldMap\\Odkrywcy_WorldMap.csproj|d:\\users\\micha\u0142\\desktop\\odkrywcy\\odkrywcy_worldmap\\odkrywcy_worldmap\\images\\mapa_swiata.jpg||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "AbsoluteMoniker": "D:0:0:{988A6898-1CC1-4B0B-B621-A85492B65195}|Odkrywcy_WorldMap\\Odkrywcy_WorldMap.csproj|c:\\users\\admin\\desktop\\odkrywcy\\odkrywcy_worldmap\\odkrywcy_worldmap\\klasy\\zwierze.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{988A6898-1CC1-4B0B-B621-A85492B65195}|Odkrywcy_WorldMap\\Odkrywcy_WorldMap.csproj|solutionrelative:odkrywcy_worldmap\\klasy\\zwierze.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{988A6898-1CC1-4B0B-B621-A85492B65195}|Odkrywcy_WorldMap\\Odkrywcy_WorldMap.csproj|c:\\users\\admin\\desktop\\odkrywcy\\odkrywcy_worldmap\\odkrywcy_worldmap\\klasy\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{988A6898-1CC1-4B0B-B621-A85492B65195}|Odkrywcy_WorldMap\\Odkrywcy_WorldMap.csproj|solutionrelative:odkrywcy_worldmap\\klasy\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{988A6898-1CC1-4B0B-B621-A85492B65195}|Odkrywcy_WorldMap\\Odkrywcy_WorldMap.csproj|c:\\users\\admin\\desktop\\odkrywcy\\odkrywcy_worldmap\\odkrywcy_worldmap\\images\\mapa_swiata.jpg||{58961B49-13E0-48C0-9258-13CBC4D40279}",
       "RelativeMoniker": "D:0:0:{988A6898-1CC1-4B0B-B621-A85492B65195}|Odkrywcy_WorldMap\\Odkrywcy_WorldMap.csproj|solutionrelative:odkrywcy_worldmap\\images\\mapa_swiata.jpg||{58961B49-13E0-48C0-9258-13CBC4D40279}"
     }
   ],
@@ -18,27 +26,52 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Zwierze.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\Odkrywcy_WorldMap\\Klasy\\Zwierze.cs",
+              "RelativeDocumentMoniker": "Odkrywcy_WorldMap\\Klasy\\Zwierze.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\Odkrywcy_WorldMap\\Klasy\\Zwierze.cs",
+              "RelativeToolTip": "Odkrywcy_WorldMap\\Klasy\\Zwierze.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T16:17:41.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Quiz.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\Odkrywcy_WorldMap\\Klasy\\Quiz.cs",
+              "RelativeDocumentMoniker": "Odkrywcy_WorldMap\\Klasy\\Quiz.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\Odkrywcy_WorldMap\\Klasy\\Quiz.cs",
+              "RelativeToolTip": "Odkrywcy_WorldMap\\Klasy\\Quiz.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T16:17:30.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "mapa_swiata.jpg",
-              "DocumentMoniker": "D:\\Users\\Micha\u0142\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\Odkrywcy_WorldMap\\Images\\mapa_swiata.jpg",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\Odkrywcy_WorldMap\\Images\\mapa_swiata.jpg",
               "RelativeDocumentMoniker": "Odkrywcy_WorldMap\\Images\\mapa_swiata.jpg",
-              "ToolTip": "D:\\Users\\Micha\u0142\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\Odkrywcy_WorldMap\\Images\\mapa_swiata.jpg",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\Odkrywcy_WorldMap\\Images\\mapa_swiata.jpg",
               "RelativeToolTip": "Odkrywcy_WorldMap\\Images\\mapa_swiata.jpg",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2025-02-26T16:11:24.818Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T16:11:24.818Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "WorldMap.xaml",
-              "DocumentMoniker": "D:\\Users\\Micha\u0142\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\Odkrywcy_WorldMap\\WorldMap.xaml",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\Odkrywcy_WorldMap\\WorldMap.xaml",
               "RelativeDocumentMoniker": "Odkrywcy_WorldMap\\WorldMap.xaml",
-              "ToolTip": "D:\\Users\\Micha\u0142\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\Odkrywcy_WorldMap\\WorldMap.xaml",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\Odkrywcy_WorldMap\\WorldMap.xaml",
               "RelativeToolTip": "Odkrywcy_WorldMap\\WorldMap.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-02-26T15:21:03.267Z",
