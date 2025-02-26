@@ -67,3 +67,5 @@ C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\ne
 C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\net8.0-windows\Odkrywcy_WorldMap.pdb
 C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\net8.0-windows\Odkrywcy_WorldMap.genruntimeconfig.cache
 C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\net8.0-windows\ref\Odkrywcy_WorldMap.dll
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\net8.0-windows\Kontynent_Page.g.cs
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\net8.0-windows\Kontynent_Page.baml

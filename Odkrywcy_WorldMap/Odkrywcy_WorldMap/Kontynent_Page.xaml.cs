@@ -14,14 +14,18 @@ using System.Windows.Shapes;
 
 namespace Odkrywcy_WorldMap
 {
-    /// <summary>
-    /// Logika interakcji dla klasy Kontynent_Page.xaml
-    /// </summary>
     public partial class Kontynent_Page : Window
     {
-        public Kontynent_Page()
+        string Nazwa;
+
+        private List<string> Slajd = new List<string>();
+
+        private List<string> Film_do_Slajdu = new List<string>();
+        public Kontynent_Page(string nazwa)
         {
             InitializeComponent();
+            this.Title = nazwa; // Poprawne ustawienie tytułu okna
+            this.Nazwa = nazwa;
         }
     }
 }

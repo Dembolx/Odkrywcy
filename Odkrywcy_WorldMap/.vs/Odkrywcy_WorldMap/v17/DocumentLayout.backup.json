@@ -3,19 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{988A6898-1CC1-4B0B-B621-A85492B65195}|Odkrywcy_WorldMap\\Odkrywcy_WorldMap.csproj|c:\\users\\admin\\desktop\\odkrywcy\\odkrywcy_worldmap\\odkrywcy_worldmap\\worldmap.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{988A6898-1CC1-4B0B-B621-A85492B65195}|Odkrywcy_WorldMap\\Odkrywcy_WorldMap.csproj|solutionrelative:odkrywcy_worldmap\\worldmap.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{988A6898-1CC1-4B0B-B621-A85492B65195}|Odkrywcy_WorldMap\\Odkrywcy_WorldMap.csproj|c:\\users\\admin\\desktop\\odkrywcy\\odkrywcy_worldmap\\odkrywcy_worldmap\\kontynent_page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{988A6898-1CC1-4B0B-B621-A85492B65195}|Odkrywcy_WorldMap\\Odkrywcy_WorldMap.csproj|solutionrelative:odkrywcy_worldmap\\kontynent_page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\admin\\AppData\\Local\\Temp\\.vsdbgsrc\\cf51f86156b71470faaa010e7833f88c34cb8003216bd1fe11832227fa184745\\Storyboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{988A6898-1CC1-4B0B-B621-A85492B65195}|Odkrywcy_WorldMap\\Odkrywcy_WorldMap.csproj|c:\\users\\admin\\desktop\\odkrywcy\\odkrywcy_worldmap\\odkrywcy_worldmap\\klasy\\kontynent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{988A6898-1CC1-4B0B-B621-A85492B65195}|Odkrywcy_WorldMap\\Odkrywcy_WorldMap.csproj|solutionrelative:odkrywcy_worldmap\\klasy\\kontynent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{988A6898-1CC1-4B0B-B621-A85492B65195}|Odkrywcy_WorldMap\\Odkrywcy_WorldMap.csproj|c:\\users\\admin\\desktop\\odkrywcy\\odkrywcy_worldmap\\odkrywcy_worldmap\\worldmap.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{988A6898-1CC1-4B0B-B621-A85492B65195}|Odkrywcy_WorldMap\\Odkrywcy_WorldMap.csproj|solutionrelative:odkrywcy_worldmap\\worldmap.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{988A6898-1CC1-4B0B-B621-A85492B65195}|Odkrywcy_WorldMap\\Odkrywcy_WorldMap.csproj|c:\\users\\admin\\desktop\\odkrywcy\\odkrywcy_worldmap\\odkrywcy_worldmap\\klasy\\kontynent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{988A6898-1CC1-4B0B-B621-A85492B65195}|Odkrywcy_WorldMap\\Odkrywcy_WorldMap.csproj|solutionrelative:odkrywcy_worldmap\\klasy\\kontynent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{988A6898-1CC1-4B0B-B621-A85492B65195}|Odkrywcy_WorldMap\\Odkrywcy_WorldMap.csproj|c:\\users\\admin\\desktop\\odkrywcy\\odkrywcy_worldmap\\odkrywcy_worldmap\\kontynent_page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{988A6898-1CC1-4B0B-B621-A85492B65195}|Odkrywcy_WorldMap\\Odkrywcy_WorldMap.csproj|solutionrelative:odkrywcy_worldmap\\kontynent_page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,46 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Storyboard.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\AppData\\Local\\Temp\\.vsdbgsrc\\cf51f86156b71470faaa010e7833f88c34cb8003216bd1fe11832227fa184745\\Storyboard.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\cf51f86156b71470faaa010e7833f88c34cb8003216bd1fe11832227fa184745\\Storyboard.cs",
-              "ToolTip": "C:\\Users\\admin\\AppData\\Local\\Temp\\.vsdbgsrc\\cf51f86156b71470faaa010e7833f88c34cb8003216bd1fe11832227fa184745\\Storyboard.cs[Tylko do odczytu]",
-              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\cf51f86156b71470faaa010e7833f88c34cb8003216bd1fe11832227fa184745\\Storyboard.cs[Tylko do odczytu]",
-              "ViewState": "AgIAADgBAAAAAAAAAAAnwEgBAAADAAAAAQAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T18:26:22.34Z",
-              "EditorCaption": "[Tylko do odczytu]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WorldMap.xaml",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\Odkrywcy_WorldMap\\WorldMap.xaml",
-              "RelativeDocumentMoniker": "Odkrywcy_WorldMap\\WorldMap.xaml",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\Odkrywcy_WorldMap\\WorldMap.xaml",
-              "RelativeToolTip": "Odkrywcy_WorldMap\\WorldMap.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-24T17:08:29.629Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Kontynent.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\Odkrywcy_WorldMap\\Klasy\\Kontynent.cs",
-              "RelativeDocumentMoniker": "Odkrywcy_WorldMap\\Klasy\\Kontynent.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\Odkrywcy_WorldMap\\Klasy\\Kontynent.cs",
-              "RelativeToolTip": "Odkrywcy_WorldMap\\Klasy\\Kontynent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T08:18:07.508Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -73,9 +36,46 @@
               "RelativeDocumentMoniker": "Odkrywcy_WorldMap\\WorldMap.xaml.cs",
               "ToolTip": "C:\\Users\\admin\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\Odkrywcy_WorldMap\\WorldMap.xaml.cs",
               "RelativeToolTip": "Odkrywcy_WorldMap\\WorldMap.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAwC8AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T17:09:16.297Z",
+              "WhenOpened": "2025-02-26T10:58:19.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Kontynent_Page.xaml",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\Odkrywcy_WorldMap\\Kontynent_Page.xaml",
+              "RelativeDocumentMoniker": "Odkrywcy_WorldMap\\Kontynent_Page.xaml",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\Odkrywcy_WorldMap\\Kontynent_Page.xaml",
+              "RelativeToolTip": "Odkrywcy_WorldMap\\Kontynent_Page.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-25T18:35:57.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Kontynent_Page.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\Odkrywcy_WorldMap\\Kontynent_Page.xaml.cs",
+              "RelativeDocumentMoniker": "Odkrywcy_WorldMap\\Kontynent_Page.xaml.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\Odkrywcy_WorldMap\\Kontynent_Page.xaml.cs*",
+              "RelativeToolTip": "Odkrywcy_WorldMap\\Kontynent_Page.xaml.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T10:53:06.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Kontynent.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\Odkrywcy_WorldMap\\Klasy\\Kontynent.cs",
+              "RelativeDocumentMoniker": "Odkrywcy_WorldMap\\Klasy\\Kontynent.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Odkrywcy\\Odkrywcy_WorldMap\\Odkrywcy_WorldMap\\Klasy\\Kontynent.cs*",
+              "RelativeToolTip": "Odkrywcy_WorldMap\\Klasy\\Kontynent.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T08:18:07.508Z",
               "EditorCaption": ""
             }
           ]

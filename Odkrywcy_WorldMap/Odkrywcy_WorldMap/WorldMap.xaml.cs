@@ -11,42 +11,25 @@ namespace Odkrywcy_WorldMap
 {
     public partial class WorldMap : Window
     {
-        private List<string> kontynenty_nazwy = new List<string>()
+        private Dictionary<string, string> kontynenty = new Dictionary<string, string>()
         {
-            "Ameryka Północna",
-            "Ameryka Południowa",
-            "Europa",
-            "Azja",
-            "Antarktyda",
-            "Australia",
-            "Afryka"
+            { "AmerykaPolnocna", "Ameryka Północna" },
+            { "AmerykaPoludniowa", "Ameryka Południowa" },
+            { "Europa", "Europa" },
+            { "Azja", "Azja" },
+            { "Antarktyda", "Antarktyda" },
+            { "Australia", "Australia" },
+            { "Afryka", "Afryka" }
         };
 
-        private List<string> kontynenty_nazwy_bez_polskiech_znakow = new List<string>()
-        {
-            "AmerykaPolnocna",
-            "AmerykaPoludniowa",
-            "Europa",
-            "Azja",
-            "Antarktyda",
-            "Australia",
-            "Afryka"
-        };
+        private double zoomFactor = 4.0;  // Współczynnik skalowania
+        private double duration = 1.5;    // Czas trwania animacji
 
-        private Dictionary<string, Kontynent> kontynenty = new Dictionary<string, Kontynent>();
-
-        private double zoomFactor = 4.0; // Jak bardzo przybliżyć
-        private double duration = 5;   // Czas animacji w sekundach
+        private Canvas obecny_canvas;
 
         public WorldMap()
         {
             InitializeComponent();
-
-            for (int i = 0; i < kontynenty_nazwy.Count; i++)
-            {
-                kontynenty.Add(kontynenty_nazwy_bez_polskiech_znakow[i], new Kontynent(kontynenty_nazwy[i]));
-            }
-
         }
 
         private void Canvas_MouseEnter(object sender, MouseEventArgs e)
@@ -112,139 +95,103 @@ namespace Odkrywcy_WorldMap
             BackgroundVideo.Play(); // Odtwórz ponownie
         }
 
-        /*private void Control_Click(object sender, RoutedEventArgs e)
-        {
-            if (sender is Canvas canvas)
-            {
-                // Pobranie wymiarów Canvas
-                double canvasWidth = canvas.ActualWidth;
-                double canvasHeight = canvas.ActualHeight;
-
-                // Jeśli wymiary są 0, unikamy dzielenia przez 0
-                if (canvasWidth == 0 || canvasHeight == 0)
-                {
-                    MessageBox.Show("Błąd: Wymiary Canvas są niepoprawne.");
-                    return;
-                }
-
-                // Pobranie pozycji Canvas
-                double left = Canvas.GetLeft(canvas);
-                double top = Canvas.GetTop(canvas);
-
-                // Jeśli wartości są NaN, ustawiamy je na 0
-                if (double.IsNaN(left)) left = 0;
-                if (double.IsNaN(top)) top = 0;
-
-                // Środek Canvas względem rodzica
-                double centerX = left + (canvasWidth / 2);
-                double centerY = top + (canvasHeight / 2);
-
-                // Obliczenie nowego przesunięcia
-                double newX = -centerX * (zoomFactor - 1);
-                double newY = -centerY * (zoomFactor - 1);
-
-                // Zapobieganie NaN
-                if (double.IsNaN(newX) || double.IsNaN(newY))
-                {
-                    MessageBox.Show("Błąd: Obliczenia zwróciły nieprawidłowe wartości.");
-                    return;
-                }
-
-                // Animacja powiększenia
-                DoubleAnimation scaleAnim = new DoubleAnimation(zoomFactor, TimeSpan.FromSeconds(duration));
-                scaleTransform.BeginAnimation(ScaleTransform.ScaleXProperty, scaleAnim);
-                scaleTransform.BeginAnimation(ScaleTransform.ScaleYProperty, scaleAnim);
-
-                // Animacja przesunięcia
-                DoubleAnimation translateXAnim = new DoubleAnimation(newX, TimeSpan.FromSeconds(duration));
-                DoubleAnimation translateYAnim = new DoubleAnimation(newY, TimeSpan.FromSeconds(duration));
-                translateTransform.BeginAnimation(TranslateTransform.XProperty, translateXAnim);
-                translateTransform.BeginAnimation(TranslateTransform.YProperty, translateYAnim);
-
-
-                // Pobranie nazwy kontynentu z nazwy Canvy
-                string kontynentNazwa = canvas.Name;
-
-                // Sprawdzenie czy istnieje w słowniku kontynentów
-                *//*if (kontynenty.TryGetValue(kontynentNazwa, out Kontynent? value))
-                {
-                    MessageBox.Show($"Kontynent: {value.Nazwa}");
-                }
-                else
-                {
-                    MessageBox.Show("Nie znaleziono kontynentu.");
-                }*//*
-            }
-        }*/
-
         private void Control_Click(object sender, RoutedEventArgs e)
         {
             if (sender is Canvas canvas)
             {
-                // Pobranie wymiarów Canvas
-                double canvasWidth = canvas.ActualWidth;
-                double canvasHeight = canvas.ActualHeight;
-
-                // Jeśli wymiary są 0, unikamy dzielenia przez 0
-                if (canvasWidth == 0 || canvasHeight == 0)
+                // Pobranie głównego kontenera
+                obecny_canvas = canvas;
+                FrameworkElement parent = canvas.Parent as FrameworkElement;
+                if (parent == null)
                 {
-                    MessageBox.Show("Błąd: Wymiary Canvas są niepoprawne.");
+                    MessageBox.Show("Błąd: Canvas nie znajduje się w odpowiednim kontenerze.");
                     return;
                 }
 
-                // Pobranie pozycji Canvas
-                double left = Canvas.GetLeft(canvas);
-                double top = Canvas.GetTop(canvas);
+                double viewportWidth = parent.ActualWidth;
+                double viewportHeight = parent.ActualHeight;
 
-                // Jeśli wartości są NaN, ustawiamy je na 0
-                if (double.IsNaN(left)) left = 0;
-                if (double.IsNaN(top)) top = 0;
-
-                // Środek Canvas względem rodzica
-                double centerX = left + (canvasWidth / 2);
-                double centerY = top + (canvasHeight / 2);
-
-                // Obliczenie nowego przesunięcia
-                double newX = -centerX * (zoomFactor - 1);
-                double newY = -centerY * (zoomFactor - 1);
-
-                // Zapobieganie NaN
-                if (double.IsNaN(newX) || double.IsNaN(newY))
+                if (viewportWidth == 0 || viewportHeight == 0)
                 {
-                    MessageBox.Show("Błąd: Obliczenia zwróciły nieprawidłowe wartości.");
+                    MessageBox.Show("Błąd: Wymiary ekranu są niepoprawne.");
                     return;
                 }
 
-                // Upewnij się, że Canvas ma odpowiedni RenderTransform
-                ScaleTransform scaleTransform = canvas.RenderTransform as ScaleTransform;
-                if (scaleTransform == null)
-                {
-                    scaleTransform = new ScaleTransform(1, 1);
-                    canvas.RenderTransform = scaleTransform;
-                    canvas.RenderTransformOrigin = new Point(0.5, 0.5); // Ustawienie środka transformacji
-                }
+                // Pobranie pozycji klikniętej Canvy
+                Point canvasPosition = canvas.TranslatePoint(new Point(canvas.ActualWidth / 2, canvas.ActualHeight / 2), parent);
+                double centerX = canvasPosition.X;
+                double centerY = canvasPosition.Y;
 
-                TranslateTransform translateTransform = canvas.RenderTransform as TranslateTransform;
-                if (translateTransform == null)
-                {
-                    translateTransform = new TranslateTransform();
-                    canvas.RenderTransform = new TransformGroup { Children = { scaleTransform, translateTransform } };
-                }
+                // Pobranie transformacji
+                TransformGroup transformGroup = parent.RenderTransform as TransformGroup ?? new TransformGroup();
+                parent.RenderTransform = transformGroup;
 
-                // Animacja powiększenia mapy (zoom)
+                ScaleTransform scaleTransform = transformGroup.Children.OfType<ScaleTransform>().FirstOrDefault() ?? new ScaleTransform(1, 1);
+                TranslateTransform translateTransform = transformGroup.Children.OfType<TranslateTransform>().FirstOrDefault() ?? new TranslateTransform();
+
+                if (!transformGroup.Children.Contains(scaleTransform)) transformGroup.Children.Add(scaleTransform);
+                if (!transformGroup.Children.Contains(translateTransform)) transformGroup.Children.Add(translateTransform);
+
+                // Obliczenie przesunięcia
+                double newX = (viewportWidth / 2) - (centerX * zoomFactor);
+                double newY = (viewportHeight / 2) - (centerY * zoomFactor);
+
+                // Animacja powiększenia i przesunięcia
                 DoubleAnimation scaleAnim = new DoubleAnimation(zoomFactor, TimeSpan.FromSeconds(duration));
                 scaleTransform.BeginAnimation(ScaleTransform.ScaleXProperty, scaleAnim);
                 scaleTransform.BeginAnimation(ScaleTransform.ScaleYProperty, scaleAnim);
 
-                // Animacja przesunięcia mapy, aby środek kontynentu stał się widoczny
                 DoubleAnimation translateXAnim = new DoubleAnimation(newX, TimeSpan.FromSeconds(duration));
                 DoubleAnimation translateYAnim = new DoubleAnimation(newY, TimeSpan.FromSeconds(duration));
                 translateTransform.BeginAnimation(TranslateTransform.XProperty, translateXAnim);
                 translateTransform.BeginAnimation(TranslateTransform.YProperty, translateYAnim);
+
+                // Rozjaśnianie ekranu
+                StartFadeOut();
             }
         }
 
+        private void StartFadeOut()
+        {
+            DoubleAnimation fadeOutAnim = new DoubleAnimation(1.0, 0.0, TimeSpan.FromSeconds(duration));
+            fadeOutAnim.Completed += FadeOut_Completed;
+            this.BeginAnimation(UIElement.OpacityProperty, fadeOutAnim);
+        }
 
+        private void FadeOut_Completed(object sender, EventArgs e)
+        {
+            // Sprawdzenie, czy obecny_canvas nie jest nullem
+            if (obecny_canvas == null)
+            {
+                MessageBox.Show("Błąd: Brak wybranego kontynentu.");
+                return;
+            }
+
+            // Pobranie nazwy kontynentu
+            string canvasName = obecny_canvas.Name;
+
+            // Sprawdzenie, czy nazwa istnieje w słowniku
+            if (!kontynenty.ContainsKey(canvasName))
+            {
+                MessageBox.Show($"Błąd: Nie znaleziono kontynentu dla {canvasName}.");
+                return;
+            }
+
+            // Pobranie pełnej nazwy kontynentu
+            string nazwaKontynentu = kontynenty[canvasName];
+
+            // Utworzenie nowego okna
+            Kontynent_Page newWindow = new Kontynent_Page(nazwaKontynentu);
+            newWindow.Opacity = 0;
+            newWindow.Show();
+
+            // Rozjaśnianie nowego okna
+            DoubleAnimation fadeInAnim = new DoubleAnimation(0.0, 1.0, TimeSpan.FromSeconds(1.0));
+            newWindow.BeginAnimation(UIElement.OpacityProperty, fadeInAnim);
+
+            // Zamknięcie starego okna
+            this.Close();
+        }
 
 
     }
