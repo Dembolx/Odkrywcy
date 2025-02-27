@@ -3,3 +3,4 @@ Piatek
 Okno z kontynentem
 Powrót do okna głównego
 i Przejście do Quizu
+Animacje przejścia do kontynentu i punkt zbliżenia
