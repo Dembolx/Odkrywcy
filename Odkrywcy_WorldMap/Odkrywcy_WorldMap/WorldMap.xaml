@@ -6,12 +6,6 @@
         xmlns:local="clr-namespace:Odkrywcy_WorldMap"
         mc:Ignorable="d"
         Title="Odkrywcy" Height="700" Width="1400">
-    <!--
-    <Window.Background>
-        <ImageBrush ImageSource="Images/mapa_swiata.jpg"/>
-    </Window.Background>
--->
-
 
     <Window.Resources>
         <!-- Złoty styl dla przycisków -->

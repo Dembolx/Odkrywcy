@@ -181,7 +181,7 @@ namespace Odkrywcy_WorldMap
             string nazwaKontynentu = kontynenty[canvasName];
 
             // Utworzenie nowego okna
-            Kontynent_Page newWindow = new Kontynent_Page(nazwaKontynentu);
+            Kontynent_Page newWindow = new Kontynent_Page(nazwaKontynentu, canvasName);
             newWindow.Opacity = 0;
             newWindow.Show();
 

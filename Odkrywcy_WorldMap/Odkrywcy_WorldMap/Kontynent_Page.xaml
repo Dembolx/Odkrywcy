@@ -1,12 +1,52 @@
 ﻿<Window x:Class="Odkrywcy_WorldMap.Kontynent_Page"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Odkrywcy_WorldMap"
-        mc:Ignorable="d"
-        Title="Kontynent" Height="700" Width="1400">
+        Title="Kontynent" Height="700" Width="1400"
+        Loaded="Window_Loaded"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+
     <Grid>
-        
+        <!-- Odtwarzanie wideo w tle -->
+        <MediaElement x:Name="BackgroundVideo" Source="Video/kangur.mp4"
+          LoadedBehavior="Play" UnloadedBehavior="Manual"
+          Stretch="Fill" MediaEnded="BackgroundVideo_MediaEnded" Width="1000" Height="400"/>
+
+        <!-- Kontener na rozmyte tło i zawartość -->
+        <Grid HorizontalAlignment="Left" Width="400" Background="{x:Null}">
+            <!-- Rozmyte tło -->
+            <Border Width="400" Height="650" Background="#4D000000" CornerRadius="10" Margin="10,0,0,0">
+                <Border.Effect>
+                    <BlurEffect Radius="10"/>
+                </Border.Effect>
+            </Border>
+
+            <!-- Właściwa zawartość (nie rozmazana) -->
+            <Grid Width="400" Height="650" Margin="10,0,0,0">
+                <StackPanel VerticalAlignment="Center" Margin="20">
+                    <!-- Tytuł slajdu -->
+                    <TextBlock x:Name="TytulSlajdu" 
+                               Foreground="White"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               TextWrapping="Wrap"
+                               TextAlignment="Center"/>
+
+                    <!-- Tekst informacji -->
+                    <TextBlock x:Name="OpisSlajdu" 
+                               Foreground="White"
+                               FontSize="16"
+                               TextWrapping="Wrap"
+                               Margin="0,10,0,10"/>
+
+                    <!-- Przyciskowa nawigacja -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                        <Button Content="⬅ W lewo" Width="80" Margin="5" Click="Lewo_Click"/>
+                        <Button Content="➡ W prawo" Width="80" Margin="5" Click="Prawo_Click"/>
+                        <Button Content="❓ Quiz" Width="80" Margin="5" Click="Quiz_Click"/>
+                        <Button Content="❌ Wyjdź" Width="80" Margin="5" Click="Wyjdz_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
