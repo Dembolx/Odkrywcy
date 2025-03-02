@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/kangur.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/slon.mp4")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/sea.mp4")]
 
 

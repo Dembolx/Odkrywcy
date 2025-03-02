@@ -8,8 +8,8 @@
     <Grid>
         <!-- Odtwarzanie wideo w tle -->
         <MediaElement x:Name="BackgroundVideo" Source="Video/kangur.mp4"
-          LoadedBehavior="Play" UnloadedBehavior="Manual"
-          Stretch="Fill" MediaEnded="BackgroundVideo_MediaEnded" Width="1000" Height="400"/>
+          LoadedBehavior="Play" UnloadedBehavior="Manual" IsMuted="True"
+          Stretch="Fill" MediaEnded="BackgroundVideo_MediaEnded"/>
 
         <!-- Kontener na rozmyte tło i zawartość -->
         <Grid HorizontalAlignment="Left" Width="400" Background="{x:Null}">

@@ -13,6 +13,7 @@
     <None Remove="Images\odkrywcy.jpg" />
     <None Remove="Video\kangur.mp4" />
     <None Remove="Video\sea.mp4" />
+    <None Remove="Video\slon.mp4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,9 +27,12 @@
     <Resource Include="Images\odkrywcy.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Video\kangur.mp4">
+    <Content Include="Video\kangur.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </Content>
+    <Content Include="Video\slon.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Video\sea.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
