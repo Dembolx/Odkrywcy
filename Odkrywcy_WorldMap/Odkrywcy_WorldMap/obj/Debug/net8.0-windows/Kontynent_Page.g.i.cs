@@ -76,7 +76,7 @@ namespace Odkrywcy_WorldMap {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Odkrywcy_WorldMap;component/kontynent_page.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Odkrywcy_WorldMap;V1.0.0.0;component/kontynent_page.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Kontynent_Page.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -71,5 +71,11 @@ C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\ne
 C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\net8.0-windows\Kontynent_Page.baml
 D:\Users\Michał\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\net8.0-windows\Kontynent_Page.g.cs
 D:\Users\Michał\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\net8.0-windows\Kontynent_Page.baml
-C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\kangur.mp4
-C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\slon.mp4
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\Australia\Aboryganie.mp4
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\Australia\kangur.mp4
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\Australia\Outback.mp4
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\Australia\surfer.mp4
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\Europa\alpy.mp4
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\Europa\hiszpania.mp4
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\Europa\londyn.mp4
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\Europa\zabytki.mp4

@@ -11,9 +11,16 @@
   <ItemGroup>
     <None Remove="Images\mapa_swiata.jpg" />
     <None Remove="Images\odkrywcy.jpg" />
+    <None Remove="Video\Aboryganie.mp4" />
+    <None Remove="Video\Europa\alpy.mp4" />
+    <None Remove="Video\Europa\hiszpania.mp4" />
+    <None Remove="Video\Europa\londyn.mp4" />
+    <None Remove="Video\Europa\zabytki.mp4" />
     <None Remove="Video\kangur.mp4" />
+    <None Remove="Video\Outback.mp4" />
     <None Remove="Video\sea.mp4" />
     <None Remove="Video\slon.mp4" />
+    <None Remove="Video\surfer.mp4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,13 +34,31 @@
     <Resource Include="Images\odkrywcy.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Content Include="Video\kangur.mp4">
+    <Content Include="Video\Australia\Aboryganie.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Video\slon.mp4">
+    <Content Include="Video\Australia\kangur.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\Australia\Outback.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\Europa\alpy.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\Europa\hiszpania.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\Europa\londyn.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\Europa\zabytki.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Video\sea.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\Australia\surfer.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

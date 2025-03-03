@@ -8,8 +8,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/kangur.mp4")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/slon.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/australia/aboryganie.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/australia/kangur.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/australia/outback.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/europa/alpy.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/europa/hiszpania.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/europa/londyn.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/europa/zabytki.mp4")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/sea.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/australia/surfer.mp4")]
 
 
