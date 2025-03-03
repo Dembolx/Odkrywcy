@@ -24,6 +24,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Video\Afryka\" />
+    <Folder Include="Video\Azja\" />
+    <Folder Include="Video\Antarktyda\" />
+    <Folder Include="Video\AmerykaPolnocna\" />
+    <Folder Include="Video\AmerykaPoludniowa\" />
     <Folder Include="Xaml\" />
   </ItemGroup>
 

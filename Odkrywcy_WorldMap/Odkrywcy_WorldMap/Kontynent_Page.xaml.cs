@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media.Animation;
 
 namespace Odkrywcy_WorldMap
 {
@@ -72,7 +73,18 @@ namespace Odkrywcy_WorldMap
 
         private void Wyjdz_Click(object sender, RoutedEventArgs e)
         {
+            // Utworzenie nowego okna
+            WorldMap newWindow = new WorldMap();
+            newWindow.Opacity = 0;
+            newWindow.Show();
+
+            // Rozjaśnianie nowego okna
+            DoubleAnimation fadeInAnim = new DoubleAnimation(0.0, 1.0, TimeSpan.FromSeconds(1.0));
+            newWindow.BeginAnimation(UIElement.OpacityProperty, fadeInAnim);
+
+            // Zamknięcie starego okna
             this.Close();
         }
+
     }
 }
