@@ -15,13 +15,13 @@ namespace Odkrywcy_WorldMap.Klasy
 
         private static Dictionary<string, string[]> FilmyKontynenty = new Dictionary<string, string[]>
         {
-            { "Australia", new string[] { "kangur.mp4", "Outback.mp4", "surfer.mp4", "Aboryganie.mp4" } }, // Zrobione
-            { "Europa", new string[] { "zabytki.mp4", "alpy.mp4", "londyn.mp4", "hiszpania.mp4" } },       // Zrobione
-            { "Azja", new string[] { "azja.mp4", "tokyo.mp4", "himalaje.mp4", "mur.mp4" } },               // Zrobione
-            { "Afryka", new string[] { "afryka.mp4", "sahara.mp4", "safari.mp4", "plemie.mp4" } },         // Zrobione
-            { "AmerykaPolnocna", new string[] { "kanion.mp4", "newyork.mp4", "park_yellowstone.mp4", "miasta.mp4" } },
-            { "AmerykaPoludniowa", new string[] { "amazonka.mp4", "rio.mp4", "andy.mp4", "machu_picchu.mp4" } },
-            { "Antarktyda", new string[] { "pingwiny.mp4", "lodowce.mp4", "stacje_badawcze.mp4", "burze_sniezne.mp4" } }
+            { "Australia", new string[] { "kangur.mp4", "Outback.mp4", "surfer.mp4", "Aboryganie.mp4" } },        // Zrobione
+            { "Europa", new string[] { "zabytki.mp4", "alpy.mp4", "londyn.mp4", "hiszpania.mp4" } },              // Zrobione
+            { "Azja", new string[] { "azja.mp4", "tokyo.mp4", "himalaje.mp4", "mur.mp4" } },                      // Zrobione
+            { "Afryka", new string[] { "afryka.mp4", "sahara.mp4", "safari.mp4", "plemie.mp4" } },                // Zrobione
+            { "AmerykaPolnocna", new string[] { "yellowstone.mp4", "newyork.mp4", "gory.mp4", "tradycje.mp4" } }, // Zrobione
+            { "AmerykaPoludniowa", new string[] { "amazonia.mp4", "rio.mp4", "uyni.mp4", "gory.mp4" } },          // Zrobione
+            { "Antarktyda", new string[] { "antarktyda.mp4", "zorza.mp4", "pingwiny.mp4", "badania.mp4" } }       // Zrobione
         };
 
         public Kontynent(string nazwa, string nazwaBezPolskich)
@@ -35,8 +35,6 @@ namespace Odkrywcy_WorldMap.Klasy
         {
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Informacje", $"{nazwa}.txt");
             Dictionary<string, string> dataDictionary = new Dictionary<string, string>();
-
-            MessageBox.Show(filePath);
 
             if (!File.Exists(filePath))
             {

@@ -16,7 +16,18 @@
     <None Remove="Video\Afryka\plemie.mp4" />
     <None Remove="Video\Afryka\safari.mp4" />
     <None Remove="Video\Afryka\sahara.mp4" />
+    <None Remove="Video\AmerykaPolnocna\gory.mp4" />
+    <None Remove="Video\AmerykaPolnocna\newyork.mp4" />
+    <None Remove="Video\AmerykaPolnocna\tradycje.mp4" />
     <None Remove="Video\AmerykaPolnocna\yellowstone.mp4" />
+    <None Remove="Video\AmerykaPoludniowa\amazonia.mp4" />
+    <None Remove="Video\AmerykaPoludniowa\gory.mp4" />
+    <None Remove="Video\AmerykaPoludniowa\rio.mp4" />
+    <None Remove="Video\AmerykaPoludniowa\uyni.mp4" />
+    <None Remove="Video\Antarktyda\antarktyda.mp4" />
+    <None Remove="Video\Antarktyda\badania.mp4" />
+    <None Remove="Video\Antarktyda\pingwiny.mp4" />
+    <None Remove="Video\Antarktyda\zorza.mp4" />
     <None Remove="Video\Azja\azja.mp4" />
     <None Remove="Video\Azja\himalaje.mp4" />
     <None Remove="Video\Azja\mur.mp4" />
@@ -33,8 +44,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Video\Antarktyda\" />
-    <Folder Include="Video\AmerykaPoludniowa\" />
     <Folder Include="Xaml\" />
   </ItemGroup>
 
@@ -57,7 +66,40 @@
     <Content Include="Video\Afryka\sahara.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Video\AmerykaPolnocna\gory.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\AmerykaPolnocna\newyork.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\AmerykaPolnocna\tradycje.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Video\AmerykaPolnocna\yellowstone.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\AmerykaPoludniowa\amazonia.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\AmerykaPoludniowa\gory.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\AmerykaPoludniowa\rio.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\AmerykaPoludniowa\uyni.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\Antarktyda\antarktyda.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\Antarktyda\badania.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\Antarktyda\pingwiny.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\Antarktyda\zorza.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Video\Australia\Aboryganie.mp4">

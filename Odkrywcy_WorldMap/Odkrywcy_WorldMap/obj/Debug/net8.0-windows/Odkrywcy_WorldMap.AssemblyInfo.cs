@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Odkrywcy_WorldMap")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71283472c811ef6a97ecc0b6c9765186268a4e65")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae96820db777e9d9c36bb698f084ec38a8a3c50c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Odkrywcy_WorldMap")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Odkrywcy_WorldMap")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
