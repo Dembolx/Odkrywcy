@@ -12,6 +12,15 @@
     <None Remove="Images\mapa_swiata.jpg" />
     <None Remove="Images\odkrywcy.jpg" />
     <None Remove="Video\Aboryganie.mp4" />
+    <None Remove="Video\Afryka\afryka.mp4" />
+    <None Remove="Video\Afryka\plemie.mp4" />
+    <None Remove="Video\Afryka\safari.mp4" />
+    <None Remove="Video\Afryka\sahara.mp4" />
+    <None Remove="Video\AmerykaPolnocna\yellowstone.mp4" />
+    <None Remove="Video\Azja\azja.mp4" />
+    <None Remove="Video\Azja\himalaje.mp4" />
+    <None Remove="Video\Azja\mur.mp4" />
+    <None Remove="Video\Azja\tokyo.mp4" />
     <None Remove="Video\Europa\alpy.mp4" />
     <None Remove="Video\Europa\hiszpania.mp4" />
     <None Remove="Video\Europa\londyn.mp4" />
@@ -24,10 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Video\Afryka\" />
-    <Folder Include="Video\Azja\" />
     <Folder Include="Video\Antarktyda\" />
-    <Folder Include="Video\AmerykaPolnocna\" />
     <Folder Include="Video\AmerykaPoludniowa\" />
     <Folder Include="Xaml\" />
   </ItemGroup>
@@ -39,6 +45,21 @@
     <Resource Include="Images\odkrywcy.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Content Include="Video\Afryka\afryka.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\Afryka\plemie.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\Afryka\safari.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\Afryka\sahara.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\AmerykaPolnocna\yellowstone.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Video\Australia\Aboryganie.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -46,6 +67,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Video\Australia\Outback.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\Azja\azja.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\Azja\himalaje.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\Azja\mur.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Video\Azja\tokyo.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Video\Europa\alpy.mp4">

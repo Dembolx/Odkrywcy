@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Windows;
 
 namespace Odkrywcy_WorldMap.Klasy
 {
@@ -16,8 +17,8 @@ namespace Odkrywcy_WorldMap.Klasy
         {
             { "Australia", new string[] { "kangur.mp4", "Outback.mp4", "surfer.mp4", "Aboryganie.mp4" } }, // Zrobione
             { "Europa", new string[] { "zabytki.mp4", "alpy.mp4", "londyn.mp4", "hiszpania.mp4" } },       // Zrobione
-            { "Azja", new string[] { "tokyo.mp4", "gory_fudżi.mp4", "swiatynie.mp4", "kuchnia.mp4" } },
-            { "Afryka", new string[] { "sawanna.mp4", "safari.mp4", "piramidy.mp4", "plemiona.mp4" } },
+            { "Azja", new string[] { "azja.mp4", "tokyo.mp4", "himalaje.mp4", "mur.mp4" } },               // Zrobione
+            { "Afryka", new string[] { "afryka.mp4", "sahara.mp4", "safari.mp4", "plemie.mp4" } },         // Zrobione
             { "AmerykaPolnocna", new string[] { "kanion.mp4", "newyork.mp4", "park_yellowstone.mp4", "miasta.mp4" } },
             { "AmerykaPoludniowa", new string[] { "amazonka.mp4", "rio.mp4", "andy.mp4", "machu_picchu.mp4" } },
             { "Antarktyda", new string[] { "pingwiny.mp4", "lodowce.mp4", "stacje_badawcze.mp4", "burze_sniezne.mp4" } }
@@ -26,7 +27,7 @@ namespace Odkrywcy_WorldMap.Klasy
         public Kontynent(string nazwa, string nazwaBezPolskich)
         {
             Nazwa = nazwa;
-            OpisySlajdow = WczytajOpisy(nazwaBezPolskich );
+            OpisySlajdow = WczytajOpisy(nazwaBezPolskich);
             Filmy = FilmyKontynenty.ContainsKey(nazwaBezPolskich) ? FilmyKontynenty[nazwaBezPolskich] : new string[0];
         }
 
@@ -35,8 +36,13 @@ namespace Odkrywcy_WorldMap.Klasy
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Informacje", $"{nazwa}.txt");
             Dictionary<string, string> dataDictionary = new Dictionary<string, string>();
 
+            MessageBox.Show(filePath);
+
             if (!File.Exists(filePath))
+            {
+                MessageBox.Show("Nie ma");
                 return dataDictionary;
+            }
 
             string[] lines = File.ReadAllLines(filePath);
             string currentTitle = "";

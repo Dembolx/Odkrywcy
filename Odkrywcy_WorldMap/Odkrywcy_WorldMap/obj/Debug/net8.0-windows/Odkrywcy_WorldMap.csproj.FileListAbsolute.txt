@@ -79,3 +79,11 @@ C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\ne
 C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\Europa\hiszpania.mp4
 C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\Europa\londyn.mp4
 C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\Europa\zabytki.mp4
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\Afryka\afryka.mp4
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\Afryka\plemie.mp4
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\Afryka\safari.mp4
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\Afryka\sahara.mp4
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\Azja\azja.mp4
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\Azja\himalaje.mp4
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\Azja\mur.mp4
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\Azja\tokyo.mp4

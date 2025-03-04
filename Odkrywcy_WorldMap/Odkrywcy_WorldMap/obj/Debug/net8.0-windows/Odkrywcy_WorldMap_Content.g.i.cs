@@ -8,9 +8,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/afryka/afryka.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/afryka/plemie.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/afryka/safari.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/afryka/sahara.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/amerykapolnocna/yellowstone.mp4")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/australia/aboryganie.mp4")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/australia/kangur.mp4")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/australia/outback.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/azja/azja.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/azja/himalaje.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/azja/mur.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/azja/tokyo.mp4")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/europa/alpy.mp4")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/europa/hiszpania.mp4")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/europa/londyn.mp4")]
