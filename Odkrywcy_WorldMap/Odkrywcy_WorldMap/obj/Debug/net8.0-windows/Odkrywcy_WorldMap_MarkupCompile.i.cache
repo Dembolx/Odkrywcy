@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Users\Michał\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\net8.0-windows\
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\net8.0-windows\
 Odkrywcy_WorldMap
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\Users\Michał\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\App.xaml
-41068858219
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\App.xaml
+7-225466739
 30-2030793912
-11969298370
-198-635017904
-Kontynent_Page.xaml;Quiz_Page.xaml;WorldMap.xaml;Xaml\WorldMap.xaml;
+15-198693789
+198-1431420039
+Kontynent_Page.xaml;MainWidnow.xaml;Memory.xaml;Milionerzy.xaml;Quiz_Page.xaml;WorldMap.xaml;Xaml\WorldMap.xaml;
 
-False
+True
 

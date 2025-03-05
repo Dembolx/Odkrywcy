@@ -15,29 +15,41 @@ using System.Windows.Shapes;
 
 namespace Odkrywcy_WorldMap
 {
-    /// <summary>
-    /// Logika interakcji dla klasy Quiz.xaml
-    /// </summary>
-    public partial class Quiz_Page : Window
+    public partial class Quiz_Page : Page
     {
-        public Quiz_Page()
+        private string nazwa;
+        private string nazwaBezPolskich;
+
+        private Frame _mainframe;
+        public Quiz_Page(string nazwa, string nazwaBezPolskich, Frame mainframe)
         {
             InitializeComponent();
+            this.nazwa = nazwa;
+            this.nazwaBezPolskich = nazwaBezPolskich;
+            Title = nazwa;
+            tytul_quizu.Text = $"QUIZ - {nazwa}";
+            _mainframe = mainframe;
         }
 
         private void Memory_Click(object sender, RoutedEventArgs e)
         {
-            // Logika dla Memory
+            _mainframe.Navigate(new Memory(_mainframe));
         }
 
-        private void Zgadywanie_Click(object sender, RoutedEventArgs e)
+        private void Milionerzy_Click(object sender, RoutedEventArgs e)
         {
-            // Logika dla Zgadywanie
+            _mainframe.Navigate(new Milionerzy(_mainframe));
         }
 
         private void Szybkosc_Click(object sender, RoutedEventArgs e)
         {
             // Logika dla Szybkość
+        }
+
+        private void BackgroundVideo_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            BackgroundVideo.Position = TimeSpan.Zero;
+            BackgroundVideo.Play();
         }
 
     }

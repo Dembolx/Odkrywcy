@@ -1,4 +1,4 @@
-﻿<Window x:Class="Odkrywcy_WorldMap.WorldMap"
+﻿<Page x:Class="Odkrywcy_WorldMap.WorldMap"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Odkrywcy" Height="700" Width="1400">
 
-    <Window.Resources>
+    <Page.Resources>
         <!-- Złoty styl dla przycisków -->
         <Style TargetType="Button">
             <Setter Property="FontSize" Value="20"/>
@@ -48,7 +48,7 @@
             <DoubleAnimation Storyboard.TargetProperty="Opacity"
                  From="0.0" To="1.0" Duration="0:0:0.5"/>
         </Storyboard>
-    </Window.Resources>
+    </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="300"/>
@@ -73,7 +73,7 @@
             </Image>
 
             <!-- Przyciski -->
-            <Button Content="Quiz Ogólny" Grid.Row="1"/>
+            <Button Content="Quiz Ogólny" Grid.Row="1" Click="Quiz_ogolny"/>
             <Button Content="Ranking" Grid.Row="2"/>
             <Button Content="Sklep" Grid.Row="3"/>
             <Button Content="Prezentacja" Grid.Row="4"/>
@@ -164,4 +164,4 @@
             </Canvas>
         </Canvas>
     </Grid>
-</Window>
+</Page>

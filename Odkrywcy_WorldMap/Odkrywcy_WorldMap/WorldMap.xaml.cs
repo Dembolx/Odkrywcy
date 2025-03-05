@@ -9,7 +9,7 @@ using System.Windows.Shapes;
 
 namespace Odkrywcy_WorldMap
 {
-    public partial class WorldMap : Window
+    public partial class WorldMap : Page
     {
         private Dictionary<string, string> kontynenty = new Dictionary<string, string>()
         {
@@ -27,9 +27,16 @@ namespace Odkrywcy_WorldMap
 
         private Canvas obecny_canvas;
 
-        public WorldMap()
+        private Frame _mainFrame;
+        public WorldMap(Frame mainFrame)
         {
             InitializeComponent();
+            _mainFrame = mainFrame;
+        }
+
+        private void Quiz_ogolny(object sender, EventArgs e)
+        {
+            _mainFrame.Navigate(new Quiz_Page("Ogólnt", "Ogolny", _mainFrame));
         }
 
         private void Canvas_MouseEnter(object sender, MouseEventArgs e)
@@ -181,16 +188,16 @@ namespace Odkrywcy_WorldMap
             string nazwaKontynentu = kontynenty[canvasName];
 
             // Utworzenie nowego okna
-            Kontynent_Page newWindow = new Kontynent_Page(nazwaKontynentu, canvasName);
+            /*Kontynent_Page newWindow = new Kontynent_Page(nazwaKontynentu, canvasName);
             newWindow.Opacity = 0;
-            newWindow.Show();
+            newWindow.Show();*/
+
+            _mainFrame.Navigate(new Kontynent_Page(nazwaKontynentu, canvasName, _mainFrame));
 
             // Rozjaśnianie nowego okna
-            DoubleAnimation fadeInAnim = new DoubleAnimation(0.0, 1.0, TimeSpan.FromSeconds(1.0));
-            newWindow.BeginAnimation(UIElement.OpacityProperty, fadeInAnim);
+            /*DoubleAnimation fadeInAnim = new DoubleAnimation(0.0, 1.0, TimeSpan.FromSeconds(1.0));
+            newWindow.BeginAnimation(UIElement.OpacityProperty, fadeInAnim);*/
 
-            // Zamknięcie starego okna
-            this.Close();
         }
 
 

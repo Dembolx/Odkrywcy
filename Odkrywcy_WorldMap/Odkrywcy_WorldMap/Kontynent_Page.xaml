@@ -1,11 +1,11 @@
-﻿<Window x:Class="Odkrywcy_WorldMap.Kontynent_Page"
+﻿<Page x:Class="Odkrywcy_WorldMap.Kontynent_Page"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Kontynent" Height="700" Width="1400"
         Loaded="Window_Loaded"
-        WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+        Background="Transparent">
 
-    <Window.Resources>
+    <Page.Resources>
         <Style x:Key="StyledButton" TargetType="Button">
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="Background" Value="#3D3D3D"/>
@@ -33,7 +33,7 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
-    </Window.Resources>
+    </Page.Resources>
 
     <Grid>
         <!-- Odtwarzanie wideo w tle -->
@@ -95,4 +95,4 @@
             </Grid>
         </Grid>
     </Grid>
-</Window>
+</Page>

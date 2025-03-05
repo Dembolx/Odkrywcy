@@ -8,19 +8,25 @@ using System.Windows.Media.Animation;
 
 namespace Odkrywcy_WorldMap
 {
-    public partial class Kontynent_Page : Window
+    public partial class Kontynent_Page : Page
     {
         private Kontynent kontynent;
         private int currentSlideIndex = 0;
         private List<KeyValuePair<string, string>> slides;
-        private string Nazwa_k;
 
-        public Kontynent_Page(string nazwa, string nazwaBezPolskich)
+        private string nazwa, nazwaBezPolskich;
+
+        private Frame _mainFrame;
+
+        public Kontynent_Page(string nazwa, string nazwaBezPolskich, Frame mainframe)
         {
             InitializeComponent();
             kontynent = new Kontynent(nazwa, nazwaBezPolskich);
             slides = kontynent.OpisySlajdow.ToList();
-            Nazwa_k = nazwaBezPolskich;
+            this.nazwaBezPolskich = nazwaBezPolskich;
+            this.nazwa = nazwa;
+
+            _mainFrame = mainframe;
 
             if (slides.Count > 0)
                 SetSlide(0, animate: false);
@@ -80,7 +86,7 @@ namespace Odkrywcy_WorldMap
             DoubleAnimation fadeOutAnim = new DoubleAnimation(1.0, 0.0, TimeSpan.FromSeconds(0.5));
             fadeOutAnim.Completed += (s, e) =>
             {
-                BackgroundVideo.Source = new Uri($"Video/{Nazwa_k}/{kontynent.Filmy[index]}", UriKind.Relative);
+                BackgroundVideo.Source = new Uri($"Video/{nazwaBezPolskich}/{kontynent.Filmy[index]}", UriKind.Relative);
                 BackgroundVideo.Play();
                 DoubleAnimation fadeInAnim = new DoubleAnimation(0.0, 1.0, TimeSpan.FromSeconds(0.5));
                 BackgroundVideo.BeginAnimation(UIElement.OpacityProperty, fadeInAnim);
@@ -108,22 +114,15 @@ namespace Odkrywcy_WorldMap
 
         private void Quiz_Click(object sender, RoutedEventArgs e)
         {
-            Quiz_Page quiz_Page = new Quiz_Page();
-            quiz_Page.Show();
-            this.Close();
+            _mainFrame.Navigate(new Quiz_Page(nazwa, nazwaBezPolskich, _mainFrame));
         }
 
         private void Wyjdz_Click(object sender, RoutedEventArgs e)
         {
-            WorldMap newWindow = new WorldMap();
-            newWindow.Opacity = 0;
-            newWindow.Show();
+            _mainFrame.Navigate(new WorldMap(_mainFrame));
 
             DoubleAnimation fadeInAnim = new DoubleAnimation(0.0, 1.0, TimeSpan.FromSeconds(1.0));
-            newWindow.BeginAnimation(UIElement.OpacityProperty, fadeInAnim);
-
             DoubleAnimation fadeOutAnim = new DoubleAnimation(1.0, 0.0, TimeSpan.FromSeconds(1.0));
-            fadeOutAnim.Completed += (s, e) => this.Close();
             this.BeginAnimation(UIElement.OpacityProperty, fadeOutAnim);
         }
     }
