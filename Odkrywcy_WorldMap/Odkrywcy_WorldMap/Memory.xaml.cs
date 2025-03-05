@@ -16,18 +16,25 @@ namespace Odkrywcy_WorldMap
         private Button secondClicked = null;
         private DispatcherTimer timer = new DispatcherTimer();
         private Frame _mainframe;
+        private ContinentData continentData;
 
-        public Memory(Frame mainframe)
+        private string nazwa, nazwabezpolskich;
+
+        public Memory(Frame mainframe, string nazwa, string nazwabezposlkich)
         {
             InitializeComponent();
             _mainframe = mainframe;
-            InitializeGame();
+
+            continentData = new ContinentData();
+            InitializeGame(nazwa);
+            this.nazwa = nazwa;
+            this.nazwabezpolskich = nazwabezposlkich;
         }
 
-        private void InitializeGame()
+        private void InitializeGame(string continent)
         {
             CreateGameBoard(4, 4);
-            SetupCardPairs();
+            SetupCardPairs(continent);
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += Timer_Tick;
         }
@@ -63,17 +70,27 @@ namespace Odkrywcy_WorldMap
             }
         }
 
-        private void SetupCardPairs()
+        private void SetupCardPairs(string continent)
         {
-            List<string> words = new List<string>
-            {
-                "Ameryka Północna", "Kontynent skrajności",
-                "Miasta Ameryki", "Nowy Jork, Toronto, Meksyk",
-                "Niezwykła Przyroda", "Góry, równiny, plaże",
-                "Rdzenne Ludy", "Indianie, Inuici, Meksykanie"
-            };
+            List<string> words = continentData.GetContinentWords(continent);
 
-            words = words.Concat(words).OrderBy(x => Guid.NewGuid()).ToList();
+            // Upewniamy się, że liczba przycisków w GameGrid jest zgodna z liczbą słów w words.
+            int buttonCount = GameGrid.Children.OfType<Button>().Count();
+
+            if (words.Count != buttonCount)
+            {
+                // Jeśli liczba słów jest mniejsza niż liczba przycisków, powielamy słowa.
+                while (words.Count < buttonCount)
+                {
+                    words.AddRange(words); // Powielamy listę, aż osiągniemy wymaganą liczbę słów
+                }
+
+                // Jeśli lista ma teraz więcej elementów niż liczba przycisków, przycinamy ją
+                words = words.Take(buttonCount).ToList();
+            }
+
+            // Losowanie i przypisanie słów do przycisków
+            words = words.OrderBy(x => Guid.NewGuid()).ToList(); // Mieszamy listę
             int index = 0;
 
             foreach (var child in GameGrid.Children)
@@ -85,6 +102,7 @@ namespace Odkrywcy_WorldMap
                 }
             }
         }
+
 
         private void Card_Click(object sender, RoutedEventArgs e)
         {
@@ -128,6 +146,12 @@ namespace Odkrywcy_WorldMap
 
             firstClicked = null;
             secondClicked = null;
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Przejdź do strony Quizy_Page
+            _mainframe.Navigate(new Quiz_Page(nazwa,nazwabezpolskich,_mainframe));
         }
     }
 }

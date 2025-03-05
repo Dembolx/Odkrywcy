@@ -33,12 +33,12 @@ namespace Odkrywcy_WorldMap
 
         private void Memory_Click(object sender, RoutedEventArgs e)
         {
-            _mainframe.Navigate(new Memory(_mainframe));
+            _mainframe.Navigate(new Memory(_mainframe, nazwa, nazwaBezPolskich));
         }
 
         private void Milionerzy_Click(object sender, RoutedEventArgs e)
         {
-            _mainframe.Navigate(new Milionerzy(_mainframe));
+            _mainframe.Navigate(new Milionerzy(nazwa, nazwaBezPolskich, _mainframe));
         }
 
         private void Szybkosc_Click(object sender, RoutedEventArgs e)
@@ -50,6 +50,13 @@ namespace Odkrywcy_WorldMap
         {
             BackgroundVideo.Position = TimeSpan.Zero;
             BackgroundVideo.Play();
+        }
+
+        // Obsługa kliknięcia przycisku Wyjście
+        private void Wyjscie_Click(object sender, RoutedEventArgs e)
+        {
+            // Przekierowanie do strony WorldMap_Page
+            NavigationService.Navigate(new WorldMap(_mainframe));
         }
 
     }

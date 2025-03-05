@@ -11,7 +11,9 @@
   <ItemGroup>
     <None Remove="Images\mapa_swiata.jpg" />
     <None Remove="Images\memory.jpg" />
+    <None Remove="Images\moeny.jpg" />
     <None Remove="Images\odkrywcy.jpg" />
+    <None Remove="Images\piorun.jpg" />
     <None Remove="Video\Aboryganie.mp4" />
     <None Remove="Video\Afryka\afryka.mp4" />
     <None Remove="Video\Afryka\plemie.mp4" />
@@ -56,7 +58,13 @@
     <Resource Include="Images\memory.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\moeny.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\odkrywcy.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\piorun.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Content Include="Video\Afryka\afryka.mp4">

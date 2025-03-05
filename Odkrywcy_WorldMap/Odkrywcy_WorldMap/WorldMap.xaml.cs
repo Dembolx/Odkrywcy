@@ -36,7 +36,7 @@ namespace Odkrywcy_WorldMap
 
         private void Quiz_ogolny(object sender, EventArgs e)
         {
-            _mainFrame.Navigate(new Quiz_Page("Ogólnt", "Ogolny", _mainFrame));
+            _mainFrame.Navigate(new Quiz_Page("Ogólny", "Ogolny", _mainFrame));
         }
 
         private void Canvas_MouseEnter(object sender, MouseEventArgs e)
@@ -158,6 +158,10 @@ namespace Odkrywcy_WorldMap
             }
         }
 
+        private void Wyjdz_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
         private void StartFadeOut()
         {
             DoubleAnimation fadeOutAnim = new DoubleAnimation(1.0, 0.0, TimeSpan.FromSeconds(duration));

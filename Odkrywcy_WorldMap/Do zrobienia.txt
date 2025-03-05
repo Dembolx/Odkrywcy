@@ -1,7 +1,5 @@
 Piatek
 
-Okno z kontynentem
-Powrót do okna głównego
-i Przejście do Quizu
-Animacje przejścia do kontynentu i punkt zbliżenia
-Do klasy Kontynent dodanie filmow , informacji o kontynencie 
+Punkty przyblizenia
+Szybkośc
+Zapis wygranych do piku

@@ -1,72 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using Odkrywcy_WorldMap.Klasy;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
+using System.Windows;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using Odkrywcy_WorldMap.Klasy;
 
 namespace Odkrywcy_WorldMap
 {
-    /// <summary>
-    /// Logika interakcji dla klasy Milionerzy.xaml
-    /// </summary>
-    public partial class Milionerzy : Page
+    public sealed partial class Milionerzy : Page
     {
         private List<Question> questions;
         private int currentQuestionIndex = 0;
+        private bool isQuestionAnswered = false;
 
-        public Milionerzy(Frame mainframe)
+        private Frame _mainframe;
+
+        private string nazwa, nazwabezposlkich;
+
+        public Milionerzy(string nazwa, string nazwabezposlkich, Frame mainframe)
         {
             this.InitializeComponent();
-            InitializeQuestions();
+            questions = Question.GetQuestions(nazwabezposlkich); // Ładowanie pytań na podstawie wybranego kontynentu
             LoadQuestion();
-        }
-
-        private void InitializeQuestions()
-        {
-            questions = new List<Question>
-        {
-            new Question(
-                "Jaki jest najwięszy park narodowy w Ameryce Północnej?",
-                new List<string> { "Yellowstone", "Banff", "Yosemite", "Grand Canyon" },
-                0),
-
-            new Question(
-                "Które miasto jest nazywane 'Miastem Aniołów'?",
-                new List<string> { "New York", "Toronto", "Los Angeles", "Chicago" },
-                2),
-
-            new Question(
-                "W którym państwie znajduje się największa liczba parków narodowych w Ameryce Północnej?",
-                new List<string> { "Kanada", "Meksyk", "USA", "Bermudy" },
-                2),
-
-            new Question(
-                "Jak nazywa się rdzenna ludność Ameryki Północnej, która zamieszkuje Arktykę?",
-                new List<string> { "Indianie", "Inuit", "Meskali", "Navajo" },
-                1),
-
-            new Question(
-                "Kiedy został założony Nowy Jork?",
-                new List<string> { "1624", "1776", "1492", "1850" },
-                0),
-
-            new Question(
-                "Który kraj ma najwięcej sąsiadów w Ameryce Północnej?",
-                new List<string> { "Kanada", "USA", "Meksyk", "Gwatemala" },
-                1),
-            
-            // Można dodać resztę pytań na podstawie podanego tekstu
-        };
+            _mainframe = mainframe;
+            this.nazwa = nazwa;
+            this.nazwabezposlkich = nazwabezposlkich;
         }
 
         private void LoadQuestion()
@@ -79,19 +35,36 @@ namespace Odkrywcy_WorldMap
                 Answer2.Content = question.Answers[1];
                 Answer3.Content = question.Answers[2];
                 Answer4.Content = question.Answers[3];
+                FeedbackText.Text = "";
+                isQuestionAnswered = false;
+
+                // Ukryj komunikat o wyniku i przyciski na początku nowego pytania
+                ResultText.Visibility = Visibility.Collapsed;
+                Answer1.Visibility = Visibility.Visible;
+                Answer2.Visibility = Visibility.Visible;
+                Answer3.Visibility = Visibility.Visible;
+                Answer4.Visibility = Visibility.Visible;
             }
             else
             {
+                // Komunikat o wygranej
                 QuestionText.Text = "Gratulacje! Ukończyłeś grę.";
                 Answer1.Visibility = Visibility.Collapsed;
                 Answer2.Visibility = Visibility.Collapsed;
                 Answer3.Visibility = Visibility.Collapsed;
                 Answer4.Visibility = Visibility.Collapsed;
+
+                // Komunikat o wygranej
+                ResultText.Text = "Wygrałeś! Gratulacje!";
+                ResultText.Foreground = new SolidColorBrush(Colors.Green); // Zielony kolor dla wygranej
+                ResultText.Visibility = Visibility.Visible;
             }
         }
 
         private void Answer_Click(object sender, RoutedEventArgs e)
         {
+            if (isQuestionAnswered) return;
+
             var button = sender as Button;
             var answerIndex = -1;
 
@@ -105,14 +78,40 @@ namespace Odkrywcy_WorldMap
             if (answerIndex == correctAnswerIndex)
             {
                 FeedbackText.Text = "Dobrze!";
+                isQuestionAnswered = true;
+                currentQuestionIndex++;
+                LoadQuestion();
             }
             else
             {
+                // Komunikat o porażce
                 FeedbackText.Text = "Błąd! Prawidłowa odpowiedź to: " + questions[currentQuestionIndex].Answers[correctAnswerIndex];
-            }
+                FeedbackText.Text += "\nKliknij, aby spróbować ponownie.";
 
-            currentQuestionIndex++;
+                // Komunikat o porażce
+                ResultText.Text = "Niestety, przegrałeś.";
+                ResultText.Foreground = new SolidColorBrush(Colors.Red); // Czerwony kolor dla porażki
+                ResultText.Visibility = Visibility.Visible;
+
+                // Ukrycie przycisków odpowiedzi po przegranej
+                Answer1.Visibility = Visibility.Collapsed;
+                Answer2.Visibility = Visibility.Collapsed;
+                Answer3.Visibility = Visibility.Collapsed;
+                Answer4.Visibility = Visibility.Collapsed;
+            }
+        }
+
+
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        {
+            currentQuestionIndex = 0;
+            ResultText.Visibility = Visibility.Collapsed; // Ukrycie komunikatu o wyniku przy resecie
             LoadQuestion();
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            _mainframe.Navigate(new Quiz_Page(nazwa, nazwabezposlkich, _mainframe));
         }
     }
 }
