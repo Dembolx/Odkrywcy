@@ -5,6 +5,36 @@
         Loaded="Window_Loaded"
         WindowStyle="None" AllowsTransparency="True" Background="Transparent">
 
+    <Window.Resources>
+        <Style x:Key="StyledButton" TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#3D3D3D"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="8,4"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="Black" BlurRadius="5" Opacity="0.3"/>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF6200EE"/>
+                    <Setter Property="Effect">
+                        <Setter.Value>
+                            <DropShadowEffect Color="White" BlurRadius="10" Opacity="0.6"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#FF3700B3"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
     <Grid>
         <!-- Odtwarzanie wideo w tle -->
         <MediaElement x:Name="BackgroundVideo" Source="Video/kangur.mp4"
@@ -22,30 +52,46 @@
 
             <!-- Właściwa zawartość (nie rozmazana) -->
             <Grid Width="400" Height="650" Margin="10,0,0,0">
-                <StackPanel VerticalAlignment="Center" Margin="20">
-                    <!-- Tytuł slajdu -->
-                    <TextBlock x:Name="TytulSlajdu" 
-                               Foreground="White"
-                               FontSize="20"
-                               FontWeight="Bold"
-                               TextWrapping="Wrap"
-                               TextAlignment="Center"/>
+                <Grid>
+                    <!-- Definiujemy układ wierszy -->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <!-- Środek (tytuł i treść) -->
+                        <RowDefinition Height="100"/>
+                        <!-- Przyciski 100px od dołu -->
+                    </Grid.RowDefinitions>
 
-                    <!-- Tekst informacji -->
-                    <TextBlock x:Name="OpisSlajdu" 
-                               Foreground="White"
-                               FontSize="16"
-                               TextWrapping="Wrap"
-                               Margin="0,10,0,10"/>
-
-                    <!-- Przyciskowa nawigacja -->
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
-                        <Button Content="⬅ W lewo" Width="80" Margin="5" Click="Lewo_Click"/>
-                        <Button Content="➡ W prawo" Width="80" Margin="5" Click="Prawo_Click"/>
-                        <Button Content="❓ Quiz" Width="80" Margin="5" Click="Quiz_Click"/>
-                        <Button Content="❌ Wyjdź" Width="80" Margin="5" Click="Wyjdz_Click"/>
+                    <!-- Środkowa zawartość -->
+                    <StackPanel Grid.Row="0" VerticalAlignment="Center" Margin="10">
+                        <TextBlock x:Name="TytulSlajdu" 
+                                   Foreground="White"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"
+                                   TextAlignment="Center"/>
+                        <TextBlock x:Name="OpisSlajdu" 
+                                   Foreground="White"
+                                   FontSize="16"
+                                   TextWrapping="Wrap"
+                                   Margin="0,10,0,10"/>
+                        <TextBlock x:Name="NumerSlajdu" 
+                                   Foreground="LightGray"
+                                   FontSize="14"
+                                   TextWrapping="Wrap"
+                                   TextAlignment="Center"/>
                     </StackPanel>
-                </StackPanel>
+
+                    <!-- Przyciski nawigacji -->
+                    <Grid Grid.Row="1" VerticalAlignment="Bottom" Margin="0,0,0,50" HorizontalAlignment="Center">
+                        <StackPanel Orientation="Horizontal">
+                            <Button Content="⬅ W lewo" Style="{StaticResource StyledButton}" Click="Lewo_Click"/>
+                            <Button Content="➡ W prawo" Style="{StaticResource StyledButton}" Click="Prawo_Click"/>
+                            <Button Content="❓ Quiz" Style="{StaticResource StyledButton}" Click="Quiz_Click"/>
+                            <Button Content="❌ Wyjdź" Style="{StaticResource StyledButton}" Click="Wyjdz_Click"/>
+                        </StackPanel>
+                    </Grid>
+
+                </Grid>
             </Grid>
         </Grid>
     </Grid>

@@ -35,6 +35,7 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/europa/hiszpania.mp4")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/europa/londyn.mp4")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/europa/zabytki.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/quiz_back.mp4")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/sea.mp4")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("video/australia/surfer.mp4")]
 

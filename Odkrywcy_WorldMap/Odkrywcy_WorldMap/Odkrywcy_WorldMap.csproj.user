@@ -10,12 +10,18 @@
     <Compile Update="Kontynent_Page.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Quiz_Page.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="WorldMap.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Kontynent_Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Quiz_Page.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WorldMap.xaml">

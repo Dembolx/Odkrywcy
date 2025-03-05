@@ -20,32 +20,72 @@ namespace Odkrywcy_WorldMap
             InitializeComponent();
             kontynent = new Kontynent(nazwa, nazwaBezPolskich);
             slides = kontynent.OpisySlajdow.ToList();
-
             Nazwa_k = nazwaBezPolskich;
 
             if (slides.Count > 0)
-                SetSlide(0);
+                SetSlide(0, animate: false);
         }
+
+
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             BackgroundVideo.Play();
         }
 
-        private void SetSlide(int index)
+        private void SetSlide(int index, bool animate = true)
         {
             if (index >= 0 && index < slides.Count)
             {
                 currentSlideIndex = index;
-                TytulSlajdu.Text = slides[index].Key;
-                OpisSlajdu.Text = slides[index].Value.ToUpper();
+
+                if (animate)
+                {
+                    AnimateTextFadeOut(() => {
+                        TytulSlajdu.Text = slides[index].Key;
+                        OpisSlajdu.Text = slides[index].Value.ToUpper();
+                        AnimateTextFadeIn();
+                    });
+                }
+                else
+                {
+                    TytulSlajdu.Text = slides[index].Key;
+                    OpisSlajdu.Text = slides[index].Value.ToUpper();
+                }
 
                 if (index < kontynent.Filmy.Length)
                 {
-                    BackgroundVideo.Source = new Uri($"Video/{Nazwa_k}/{kontynent.Filmy[index]}", UriKind.Relative);
-                    BackgroundVideo.Play();
+                    AnimateVideoTransition(index);
                 }
             }
+        }
+
+        private void AnimateTextFadeOut(Action onComplete)
+        {
+            DoubleAnimation fadeOutAnim = new DoubleAnimation(1.0, 0.0, TimeSpan.FromSeconds(0.5));
+            fadeOutAnim.Completed += (s, e) => onComplete?.Invoke();
+            TytulSlajdu.BeginAnimation(UIElement.OpacityProperty, fadeOutAnim);
+            OpisSlajdu.BeginAnimation(UIElement.OpacityProperty, fadeOutAnim);
+        }
+
+        private void AnimateTextFadeIn()
+        {
+            DoubleAnimation fadeInAnim = new DoubleAnimation(0.0, 1.0, TimeSpan.FromSeconds(0.5));
+            TytulSlajdu.BeginAnimation(UIElement.OpacityProperty, fadeInAnim);
+            OpisSlajdu.BeginAnimation(UIElement.OpacityProperty, fadeInAnim);
+        }
+
+        private void AnimateVideoTransition(int index)
+        {
+            DoubleAnimation fadeOutAnim = new DoubleAnimation(1.0, 0.0, TimeSpan.FromSeconds(0.5));
+            fadeOutAnim.Completed += (s, e) =>
+            {
+                BackgroundVideo.Source = new Uri($"Video/{Nazwa_k}/{kontynent.Filmy[index]}", UriKind.Relative);
+                BackgroundVideo.Play();
+                DoubleAnimation fadeInAnim = new DoubleAnimation(0.0, 1.0, TimeSpan.FromSeconds(0.5));
+                BackgroundVideo.BeginAnimation(UIElement.OpacityProperty, fadeInAnim);
+            };
+            BackgroundVideo.BeginAnimation(UIElement.OpacityProperty, fadeOutAnim);
         }
 
         private void BackgroundVideo_MediaEnded(object sender, RoutedEventArgs e)
@@ -68,23 +108,23 @@ namespace Odkrywcy_WorldMap
 
         private void Quiz_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Quiz jeszcze nie jest zaimplementowany!", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+            Quiz_Page quiz_Page = new Quiz_Page();
+            quiz_Page.Show();
+            this.Close();
         }
 
         private void Wyjdz_Click(object sender, RoutedEventArgs e)
         {
-            // Utworzenie nowego okna
             WorldMap newWindow = new WorldMap();
             newWindow.Opacity = 0;
             newWindow.Show();
 
-            // Rozjaśnianie nowego okna
             DoubleAnimation fadeInAnim = new DoubleAnimation(0.0, 1.0, TimeSpan.FromSeconds(1.0));
             newWindow.BeginAnimation(UIElement.OpacityProperty, fadeInAnim);
 
-            // Zamknięcie starego okna
-            this.Close();
+            DoubleAnimation fadeOutAnim = new DoubleAnimation(1.0, 0.0, TimeSpan.FromSeconds(1.0));
+            fadeOutAnim.Completed += (s, e) => this.Close();
+            this.BeginAnimation(UIElement.OpacityProperty, fadeOutAnim);
         }
-
     }
 }

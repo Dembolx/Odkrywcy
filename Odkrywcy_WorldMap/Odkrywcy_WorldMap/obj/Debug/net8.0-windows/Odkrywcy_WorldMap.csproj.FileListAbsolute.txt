@@ -115,3 +115,5 @@ D:\Users\Michał\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\
 D:\Users\Michał\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\Antarktyda\pingwiny.mp4
 D:\Users\Michał\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\Antarktyda\zorza.mp4
 D:\Users\Michał\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\bin\Debug\net8.0-windows\Video\Antarktyda\badania.mp4
+D:\Users\Michał\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\net8.0-windows\Quiz_Page.baml
+D:\Users\Michał\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\net8.0-windows\Quiz_Page.g.cs
