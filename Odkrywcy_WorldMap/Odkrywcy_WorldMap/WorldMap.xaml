@@ -74,8 +74,8 @@
 
             <!-- Przyciski -->
             <Button Content="Quiz Ogólny" Grid.Row="1" Click="Quiz_ogolny"/>
-            <Button Content="Ranking" Grid.Row="2"/>
-            <Button Content="Sklep" Grid.Row="3"/>
+            <Button Content="Ranking" Grid.Row="2" Click="Ranking_Page"/>
+            <Button Content="Sklep" Grid.Row="3" Click="Sklep_Page"/>
             <Button Content="Prezentacja" Grid.Row="4"/>
             <Button Content="Wyjdź" Grid.Row="5" Click="Wyjdz_Click"/>
         </Grid>

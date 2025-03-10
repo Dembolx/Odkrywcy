@@ -9,11 +9,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\jaguar.jpg" />
+    <None Remove="Images\kangurr.jpg" />
+    <None Remove="Images\lion.jpg" />
     <None Remove="Images\mapa_swiata.jpg" />
     <None Remove="Images\memory.jpg" />
     <None Remove="Images\moeny.jpg" />
     <None Remove="Images\odkrywcy.jpg" />
+    <None Remove="Images\orzel.jpg" />
+    <None Remove="Images\panda.jpg" />
+    <None Remove="Images\pingwin.jpg" />
     <None Remove="Images\piorun.jpg" />
+    <None Remove="Images\wilk.jpg" />
     <None Remove="Video\Aboryganie.mp4" />
     <None Remove="Video\Afryka\afryka.mp4" />
     <None Remove="Video\Afryka\plemie.mp4" />
@@ -52,6 +59,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\jaguar.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\kangurr.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\lion.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\mapa_swiata.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -64,7 +80,19 @@
     <Resource Include="Images\odkrywcy.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\orzel.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\panda.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\pingwin.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\piorun.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\wilk.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Content Include="Video\Afryka\afryka.mp4">

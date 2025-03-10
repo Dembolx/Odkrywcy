@@ -22,6 +22,15 @@
     <Compile Update="Quiz_Page.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Ranking.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Sklep.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Szybkosc.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="WorldMap.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -40,6 +49,15 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Quiz_Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ranking.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Sklep.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Szybkosc.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WorldMap.xaml">

@@ -43,7 +43,7 @@ namespace Odkrywcy_WorldMap
 
         private void Szybkosc_Click(object sender, RoutedEventArgs e)
         {
-            // Logika dla Szybkość
+            _mainframe.Navigate(new Szybkosc(nazwa, nazwaBezPolskich, _mainframe));
         }
 
         private void BackgroundVideo_MediaEnded(object sender, RoutedEventArgs e)

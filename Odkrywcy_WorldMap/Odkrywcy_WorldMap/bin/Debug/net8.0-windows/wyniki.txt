@@ -1,0 +1,4 @@
+[2025-03-10 14:50:52] | Memory | Kontynent: Ogólny | Czas: 00:52:00 | Punkty: 826 | Wynik: Ukończono
+[2025-03-10 14:50:53] | Memory | Kontynent: Ogólny | Czas: 00:52:00 | Punkty: 0 | Wynik: Przerwano
+[2025-03-10 14:52:14] | Memory | Kontynent: Ogólny | Czas: 00:45:96 | Punkty: 846 | Wynik: Ukończono
+[2025-03-10 14:52:15] | Memory | Kontynent: Ogólny | Czas: 00:45:96 | Punkty: 0 | Wynik: Przerwano

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -17,6 +19,7 @@ namespace Odkrywcy_WorldMap
         private DispatcherTimer timer = new DispatcherTimer();
         private Frame _mainframe;
         private ContinentData continentData;
+        private Stopwatch stopwatch = new Stopwatch();
 
         private string nazwa, nazwabezpolskich;
 
@@ -24,15 +27,16 @@ namespace Odkrywcy_WorldMap
         {
             InitializeComponent();
             _mainframe = mainframe;
-
             continentData = new ContinentData();
-            InitializeGame(nazwa);
-            this.nazwa = nazwa;
+            this.nazwa = string.IsNullOrEmpty(nazwa) ? "Ogólny" : nazwa;
             this.nazwabezpolskich = nazwabezposlkich;
+
+            InitializeGame(nazwa);
         }
 
         private void InitializeGame(string continent)
         {
+            stopwatch.Restart();
             CreateGameBoard(4, 4);
             SetupCardPairs(continent);
             timer.Interval = TimeSpan.FromSeconds(1);
@@ -73,24 +77,12 @@ namespace Odkrywcy_WorldMap
         private void SetupCardPairs(string continent)
         {
             List<string> words = continentData.GetContinentWords(continent);
-
-            // Upewniamy się, że liczba przycisków w GameGrid jest zgodna z liczbą słów w words.
             int buttonCount = GameGrid.Children.OfType<Button>().Count();
 
-            if (words.Count != buttonCount)
-            {
-                // Jeśli liczba słów jest mniejsza niż liczba przycisków, powielamy słowa.
-                while (words.Count < buttonCount)
-                {
-                    words.AddRange(words); // Powielamy listę, aż osiągniemy wymaganą liczbę słów
-                }
+            while (words.Count < buttonCount)
+                words.AddRange(words);
 
-                // Jeśli lista ma teraz więcej elementów niż liczba przycisków, przycinamy ją
-                words = words.Take(buttonCount).ToList();
-            }
-
-            // Losowanie i przypisanie słów do przycisków
-            words = words.OrderBy(x => Guid.NewGuid()).ToList(); // Mieszamy listę
+            words = words.Take(buttonCount).OrderBy(x => Guid.NewGuid()).ToList();
             int index = 0;
 
             foreach (var child in GameGrid.Children)
@@ -102,7 +94,6 @@ namespace Odkrywcy_WorldMap
                 }
             }
         }
-
 
         private void Card_Click(object sender, RoutedEventArgs e)
         {
@@ -146,12 +137,58 @@ namespace Odkrywcy_WorldMap
 
             firstClicked = null;
             secondClicked = null;
+
+            if (GameGrid.Children.OfType<Button>().All(b => !b.IsEnabled))
+                EndGame(true);
+        }
+
+        private void EndGame(bool completed)
+        {
+            stopwatch.Stop();
+            string finalTime = stopwatch.Elapsed.ToString(@"mm\:ss\:ff");
+            string result = completed ? "Ukończono" : "Przerwano";
+            int score = completed ? CalculateScore(stopwatch.Elapsed) : 0;
+
+            // Wyświetl wynik i czas gry
+            string message = $"Gratulacje! {result}\nCzas gry: {finalTime}\nTwój wynik: {score} punktów.";
+            MessageBox.Show(message, "Koniec gry", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            SaveResult(finalTime, score, result);
+        }
+
+        private int CalculateScore(TimeSpan elapsedTime)
+        {
+            double totalSeconds = elapsedTime.TotalSeconds;
+
+            // Można dostosować punktację zależnie od czasu
+            double maxScore = 1000;
+            double penaltyPerSecond = maxScore / 300; // 5 minut = 0 pkt
+            int finalScore = (int)(maxScore - (totalSeconds * penaltyPerSecond));
+
+            return Math.Max(finalScore, 0); // Minimalny wynik to 0
+        }
+
+        private void SaveResult(string time, int score, string result)
+        {
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Informacje", $"Quiz_Historia.txt");
+            string currentDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            string gameName = "Memory";
+            string entry = $"[{currentDate}] | {gameName} | Kontynent: {nazwa} | Czas: {time} | Punkty: {score} | {result}";
+
+            try
+            {
+                File.AppendAllText(filePath, entry + Environment.NewLine);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Błąd zapisu pliku: {ex.Message}");
+            }
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
-            // Przejdź do strony Quizy_Page
-            _mainframe.Navigate(new Quiz_Page(nazwa,nazwabezpolskich,_mainframe));
+            EndGame(false);
+            _mainframe.Navigate(new Quiz_Page(nazwa, nazwabezpolskich, _mainframe));
         }
     }
 }

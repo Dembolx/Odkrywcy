@@ -1,0 +1,18 @@
+[2025-03-10 13:36:38] | Szybkość | Zdobyte punkty: -19 | Czas: 00:103:10 (+87s) | Wygrana
+[2025-03-10 13:51:42] | Milionerzy | Zdobyte punkty: 3 | Czas: 00:11:94 | Przegrana
+[2025-03-10 14:10:29] | Memory | Czas: 05:07:55 | Wynik: Ukończono
+[2025-03-10 14:56:45] | Memory | Kontynent: Ameryka Północna | Czas: 03:27:67 | Punkty: 307 | Wynik: Ukończono
+[2025-03-10 14:58:34] | Memory | Kontynent: Ameryka Północna | Czas: 03:27:67 | Punkty: 0 | Wynik: Przerwano
+[2025-03-10 15:28:16] | Milionerzy | Kontynent: Ameryka Północna | Zdobyte punkty: 1 | Czas: 00:07:51 | Przegrana
+[2025-03-10 15:46:31] | Szybkość | Kontynent: Europa | Zdobyte punkty: 0 | Czas: 00:56:90 (+30s) | Wygrana
+[2025-03-10 16:05:25] | Milionerzy | Kontynent: Afryka | Zdobyte punkty: 0 | Czas: 00:03:47 | Przegrana
+[2025-03-10 16:05:39] | Milionerzy | Kontynent: Afryka | Zdobyte punkty: 3 | Czas: 00:12:14 | Przegrana
+[2025-03-10 16:16:05] | Memory | Kontynent: Ogólny | Czas: 00:36:15 | Punkty: 879 | Ukończono
+[2025-03-10 16:16:12] | Memory | Kontynent: Ogólny | Czas: 00:36:15 | Punkty: 0 | Przerwano
+[2025-03-10 16:19:01] | Szybkość | Kontynent: Ogólny | Zdobyte punkty: 823 | Czas: 00:41:67 (+15s) | Wygrana
+[2025-03-10 18:09:22] | Memory | Kontynent: Ameryka Północna | Czas: 00:25:48 | Punkty: 915 | Ukończono
+[2025-03-10 18:09:25] | Memory | Kontynent: Ameryka Północna | Czas: 00:25:48 | Punkty: 0 | Przerwano
+[2025-03-10 18:09:54] | Szybkość | Kontynent: Ogólny | Zdobyte punkty: 144 | Czas: 00:99:35 (+84s) | Wygrana
+[2025-03-10 18:11:46] | Szybkość | Kontynent: Europa | Zdobyte punkty: 354 | Czas: 00:78:96 (+63s) | Wygrana
+[2025-03-10 18:14:18] | Szybkość | Kontynent: Ameryka Południowa | Czas: 00:67:34 (+48s) | Punkty: 500 | Wygrana
+[2025-03-10 18:17:06] | Milionerzy | Kontynent: Ameryka Północna | Czas: 00:04:27 | Punkty: 100 | Przegrana

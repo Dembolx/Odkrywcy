@@ -1,5 +1,6 @@
-Piatek
+Wtorek
 
-Punkty przyblizenia
-Szybkośc
-Zapis wygranych do piku
+klasa zweizre
+Informacja o pieniadzach
+estetyka sklepu 
+zdjecia zwierzat

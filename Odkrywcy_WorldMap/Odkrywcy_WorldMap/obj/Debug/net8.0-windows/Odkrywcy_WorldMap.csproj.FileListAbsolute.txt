@@ -138,3 +138,9 @@ C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\ne
 C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\net8.0-windows\Memory.baml
 C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\net8.0-windows\Milionerzy.g.cs
 C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\net8.0-windows\Milionerzy.baml
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\net8.0-windows\Szybkosc.g.cs
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\net8.0-windows\Szybkosc.baml
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\net8.0-windows\Ranking.g.cs
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\net8.0-windows\Ranking.baml
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\net8.0-windows\Sklep.g.cs
+C:\Users\admin\Desktop\Odkrywcy\Odkrywcy_WorldMap\Odkrywcy_WorldMap\obj\Debug\net8.0-windows\Sklep.baml

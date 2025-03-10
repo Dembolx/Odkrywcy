@@ -1,0 +1,98 @@
+﻿<Page x:Class="Odkrywcy_WorldMap.Sklep"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Odkrywcy_WorldMap"
+      mc:Ignorable="d" 
+      Background="Gray"
+      Title="Sklep">
+
+    <Grid Width="1400" Height="750">
+        <StackPanel>
+            <TextBlock Text="Sklep" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" Margin="10"/>
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <WrapPanel Margin="20" HorizontalAlignment="Center">
+
+                    <!-- Produkt 1 -->
+                    <Border BorderThickness="2" BorderBrush="Black" CornerRadius="10" Padding="10" Margin="10" Width="200">
+                        <StackPanel>
+                            <Image Source="Images/lion.jpg" Height="120" Stretch="UniformToFill"/>
+                            <TextBlock Text="Lew" FontSize="18" FontWeight="Bold" Margin="5"/>
+                            <TextBlock Text="Kontynent: Afryka" FontSize="14" Margin="5"/>
+                            <TextBlock Text="Cena: 500 zł" FontSize="16" FontWeight="Bold" Margin="5"/>
+                            <Button Content="Kup" Background="Green" Foreground="White" Margin="5" Padding="5"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Produkt 2 -->
+                    <Border BorderThickness="2" BorderBrush="Black" CornerRadius="10" Padding="10" Margin="10" Width="200">
+                        <StackPanel>
+                            <Image Source="Images/panda.jpg" Height="120" Stretch="UniformToFill"/>
+                            <TextBlock Text="Panda" FontSize="18" FontWeight="Bold" Margin="5"/>
+                            <TextBlock Text="Kontynent: Azja" FontSize="14" Margin="5"/>
+                            <TextBlock Text="Cena: 700 zł" FontSize="16" FontWeight="Bold" Margin="5"/>
+                            <Button Content="Kup" Background="Green" Foreground="White" Margin="5" Padding="5"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Produkt 3 -->
+                    <Border BorderThickness="2" BorderBrush="Black" CornerRadius="10" Padding="10" Margin="10" Width="200">
+                        <StackPanel>
+                            <Image Source="Images/kangurr.jpg" Height="120" Stretch="UniformToFill"/>
+                            <TextBlock Text="Kangur" FontSize="18" FontWeight="Bold" Margin="5"/>
+                            <TextBlock Text="Kontynent: Australia" FontSize="14" Margin="5"/>
+                            <TextBlock Text="Cena: 600 zł" FontSize="16" FontWeight="Bold" Margin="5"/>
+                            <Button Content="Kup" Background="Green" Foreground="White" Margin="5" Padding="5"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Produkt 4 -->
+                    <Border BorderThickness="2" BorderBrush="Black" CornerRadius="10" Padding="10" Margin="10" Width="200">
+                        <StackPanel>
+                            <Image Source="Images/orzel.jpg" Height="120" Stretch="UniformToFill"/>
+                            <TextBlock Text="Orzeł" FontSize="18" FontWeight="Bold" Margin="5"/>
+                            <TextBlock Text="Kontynent: Ameryka Północna" FontSize="14" Margin="5"/>
+                            <TextBlock Text="Cena: 650 zł" FontSize="16" FontWeight="Bold" Margin="5"/>
+                            <Button Content="Kup" Background="Green" Foreground="White" Margin="5" Padding="5"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Produkt 5 -->
+                    <Border BorderThickness="2" BorderBrush="Black" CornerRadius="10" Padding="10" Margin="10" Width="200">
+                        <StackPanel>
+                            <Image Source="Images/pingwin.jpg" Height="120" Stretch="UniformToFill"/>
+                            <TextBlock Text="Pingwin" FontSize="18" FontWeight="Bold" Margin="5"/>
+                            <TextBlock Text="Kontynent: Antarktyda" FontSize="14" Margin="5"/>
+                            <TextBlock Text="Cena: 550 zł" FontSize="16" FontWeight="Bold" Margin="5"/>
+                            <Button Content="Kup" Background="Green" Foreground="White" Margin="5" Padding="5"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Produkt 6 -->
+                    <Border BorderThickness="2" BorderBrush="Black" CornerRadius="10" Padding="10" Margin="10" Width="200">
+                        <StackPanel>
+                            <Image Source="Images/wilk.jpg" Height="120" Stretch="UniformToFill"/>
+                            <TextBlock Text="Wilk" FontSize="18" FontWeight="Bold" Margin="5"/>
+                            <TextBlock Text="Kontynent: Europa" FontSize="14" Margin="5"/>
+                            <TextBlock Text="Cena: 480 zł" FontSize="16" FontWeight="Bold" Margin="5"/>
+                            <Button Content="Kup" Background="Green" Foreground="White" Margin="5" Padding="5"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Produkt 7 -->
+                    <Border BorderThickness="2" BorderBrush="Black" CornerRadius="10" Padding="10" Margin="10" Width="200">
+                        <StackPanel>
+                            <Image Source="Images/jaguar.jpg" Height="120" Stretch="UniformToFill"/>
+                            <TextBlock Text="Jaguar" FontSize="18" FontWeight="Bold" Margin="5"/>
+                            <TextBlock Text="Kontynent: Ameryka Południowa" FontSize="14" Margin="5"/>
+                            <TextBlock Text="Cena: 720 zł" FontSize="16" FontWeight="Bold" Margin="5"/>
+                            <Button Content="Kup" Background="Green" Foreground="White" Margin="5" Padding="5"/>
+                        </StackPanel>
+                    </Border>
+                </WrapPanel>
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</Page>

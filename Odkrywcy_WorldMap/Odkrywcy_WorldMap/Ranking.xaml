@@ -1,0 +1,143 @@
+﻿<Page x:Class="Odkrywcy_WorldMap.Ranking"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Odkrywcy_WorldMap"
+      mc:Ignorable="d" 
+      Title="Ranking">
+
+    <Page.Resources>
+        <!-- Styl dla nagłówka -->
+        <Style TargetType="TextBlock" x:Key="HeaderStyle">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0,20,0,10"/>
+            <Setter Property="TextDecorations" Value="Underline"/>
+        </Style>
+
+        <!-- Styl dla sekcji tekstowej -->
+        <Style TargetType="TextBlock" x:Key="SectionTextStyle">
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="#E74C3C"/>
+            <Setter Property="Margin" Value="0,10,0,5"/>
+        </Style>
+
+        <!-- Styl dla przycisków -->
+        <Style TargetType="Button" x:Key="ButtonStyle">
+            <Setter Property="Background" Value="#FF4081"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Width" Value="140"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#E91E63"/>
+                    <Setter Property="ScaleTransform.ScaleX" Value="1.1"/>
+                    <Setter Property="ScaleTransform.ScaleY" Value="1.1"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#D81B60"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Animacja FadeIn -->
+        <Storyboard x:Key="FadeInAnimation">
+            <DoubleAnimation
+                Storyboard.TargetProperty="Opacity"
+                From="0" To="1" Duration="0:0:1"/>
+        </Storyboard>
+
+        <!-- Styl dla ListView -->
+        <Style TargetType="ListView">
+            <Setter Property="Background" Value="#34495E"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="10"/>
+        </Style>
+
+        <!-- Styl dla elementów w ListView -->
+        <Style TargetType="ListViewItem">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Background" Value="#2C3E50"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="BorderBrush" Value="#1ABC9C"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#1ABC9C"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="ScaleTransform.ScaleX" Value="1.05"/>
+                    <Setter Property="ScaleTransform.ScaleY" Value="1.05"/>
+                </Trigger>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="#16A085"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
+
+    <Grid Margin="10" Background="#34495E">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Nagłówek główny -->
+        <TextBlock Text="Rankingi i Historia" Style="{StaticResource HeaderStyle}" Grid.Row="0"/>
+
+        <!-- Sekcja Historia Gier -->
+        <TextBlock Text="Historia Gier" Style="{StaticResource SectionTextStyle}" Grid.Row="1"/>
+        <ListView Name="GameHistoryList" Grid.Row="2" Height="300">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Data" DisplayMemberBinding="{Binding Date}" Width="150"/>
+                    <GridViewColumn Header="Gra" DisplayMemberBinding="{Binding Game}" Width="120"/>
+                    <GridViewColumn Header="Kontynent" DisplayMemberBinding="{Binding Continent}" Width="150"/>
+                    <GridViewColumn Header="Punkty" DisplayMemberBinding="{Binding Points}" Width="100"/>
+                    <GridViewColumn Header="Czas" DisplayMemberBinding="{Binding Time}" Width="150"/>
+                    <GridViewColumn Header="Wynik" DisplayMemberBinding="{Binding Result}" Width="120"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <!-- Sekcja Ranking Gier -->
+        <TextBlock Text="Ranking Gier (Posortowane według punktów)" Style="{StaticResource SectionTextStyle}" Grid.Row="3"/>
+        <ListView Name="GameRankingList" Grid.Row="4" Height="300">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Data" DisplayMemberBinding="{Binding Date}" Width="150"/>
+                    <GridViewColumn Header="Gra" DisplayMemberBinding="{Binding Game}" Width="150"/>
+                    <GridViewColumn Header="Kontynent" DisplayMemberBinding="{Binding Continent}" Width="150"/>
+                    <GridViewColumn Header="Punkty" DisplayMemberBinding="{Binding Points}" Width="100"/>
+                    <GridViewColumn Header="Czas" DisplayMemberBinding="{Binding Time}" Width="150"/>
+                    <GridViewColumn Header="Wynik" DisplayMemberBinding="{Binding Result}" Width="120"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <!-- Przycisk Wyjścia - na dole strony -->
+        <Button Content="Wyjście" HorizontalAlignment="Center" VerticalAlignment="Bottom" 
+                Grid.Row="5" Style="{StaticResource ButtonStyle}" Click="Wyjscie_Click" VerticalContentAlignment="Center"/>
+    </Grid>
+</Page>

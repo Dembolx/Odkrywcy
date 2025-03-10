@@ -204,6 +204,16 @@ namespace Odkrywcy_WorldMap
 
         }
 
+        private void Ranking_Page(object sender, RoutedEventArgs e)
+        {
+            _mainFrame.Navigate(new Ranking(_mainFrame));
+        }
+
+        private void Sklep_Page(object sender, RoutedEventArgs e)
+        {
+            _mainFrame.Navigate(new Sklep());
+        }
+
 
     }
 }
