@@ -32,6 +32,7 @@ namespace Odkrywcy_WorldMap
         {
             InitializeComponent();
             _mainFrame = mainFrame;
+            Zwierze mj = new Zwierze("Chuj", WorldMap_Canvas, zwAfryka);
         }
 
         private void Quiz_ogolny(object sender, EventArgs e)
@@ -211,7 +212,7 @@ namespace Odkrywcy_WorldMap
 
         private void Sklep_Page(object sender, RoutedEventArgs e)
         {
-            _mainFrame.Navigate(new Sklep());
+            _mainFrame.Navigate(new Sklep(_mainFrame, WorldMap_Canvas, zwAfryka));
         }
 
 
