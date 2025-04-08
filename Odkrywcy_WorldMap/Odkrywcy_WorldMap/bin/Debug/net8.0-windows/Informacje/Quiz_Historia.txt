@@ -17,3 +17,4 @@
 [2025-03-10 18:14:18] | Szybkość | Kontynent: Ameryka Południowa | Czas: 00:67:34 (+48s) | Punkty: 500 | Wygrana
 [2025-03-10 18:17:06] | Milionerzy | Kontynent: Ameryka Północna | Czas: 00:04:27 | Punkty: 100 | Przegrana
 [2025-03-11 09:29:55] | Milionerzy | Kontynent: Ameryka Północna | Czas: 00:03:15 | Punkty: 100 | Przegrana
+[2025-03-17 12:11:50] | Milionerzy | Kontynent: Europa | Czas: 00:03:28 | Punkty: 100 | Przegrana

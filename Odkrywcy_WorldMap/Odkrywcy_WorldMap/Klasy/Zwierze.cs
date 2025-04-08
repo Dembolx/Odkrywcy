@@ -1,126 +1,263 @@
 ﻿using System;
+
 using System.Windows;
+
 using System.Windows.Controls;
+
 using System.Windows.Media;
+
 using System.Windows.Shapes;
+
 using System.Windows.Threading;
 
 namespace Odkrywcy_WorldMap.Klasy
-{
-    public class Zwierze
-    {
-        private string nazwa;
-        private Ellipse zwierzeUI;
-        private Canvas mapa;
-        private Random random;
-        private DispatcherTimer timer;
-        private double x, y;
-        private double krok = 10;
 
-        public Zwierze(string nazwa, Canvas mapa, Path path)
+{
+
+    public class Zwierze
+
+    {
+
+        private string nazwa;
+
+        private Ellipse zwierzeUI;
+
+        private Canvas mapa;
+
+        private Path kontynentPath; // Ścieżka reprezentująca kontynent
+
+        private Random random;
+
+        private DispatcherTimer timer;
+
+        private double x, y;
+
+        private double krok = 10; // Krok przesunięcia
+
+        // Właściwości publiczne do zarządzania pozycją i UI
+
+        public double X
+
         {
+
+            get { return x; }
+
+            private set { x = value; }
+
+        }
+
+        public double Y
+
+        {
+
+            get { return y; }
+
+            private set { y = value; }
+
+        }
+
+        public Ellipse ZwierzeUI
+
+        {
+
+            get { return zwierzeUI; }
+
+        }
+
+        public Zwierze(string nazwa, Canvas mapa, Path kontynentPath)
+
+        {
+
             MessageBox.Show($"Kupiono {nazwa}");
+
             this.nazwa = nazwa;
+
             this.mapa = mapa;
+
+            this.kontynentPath = kontynentPath;
+
             this.random = new Random();
+
             DodajDoMapy();
+
+            // Inicjalizacja timera
+
+            /*timer = new DispatcherTimer();
+
+            timer.Interval = TimeSpan.FromSeconds(1); // Interwał 1 sekunda
+
+            timer.Tick += Timer_Tick; // Podpięcie metody do zdarzenia Tick
+
+            timer.Start(); // Uruchomienie timera*/
+
         }
 
         private void DodajDoMapy()
+
         {
-            // Ustalamy losową pozycję początkową zwierzęcia na Canvas
-            x = random.Next(300, 1000); // 100 to szerokość zwierzęcia
-            y = random.Next(200, 500); // 100 to wysokość zwierzęcia
+
+            // Ustalamy początkową pozycję zwierzęcia wewnątrz kontynentu
+
+            Point pozycja = LosujPunktWewnatrzKontynentu();
+
+            x = pozycja.X;
+
+            y = pozycja.Y;
 
             zwierzeUI = new Ellipse
+
             {
-                Width = 300,
-                Height = 300,
+
+                Width = 10,
+
+                Height = 10,
+
                 Fill = Brushes.Black
+
             };
 
             // Ustawiamy początkową pozycję zwierzęcia
-            Canvas.SetLeft(zwierzeUI, 600);
-            Canvas.SetTop(zwierzeUI, 250);
+
+            Canvas.SetLeft(zwierzeUI, x);
+
+            Canvas.SetTop(zwierzeUI, y);
 
             // Ustawiamy najwyższy ZIndex, aby element był zawsze na wierzchu
+
             Canvas.SetZIndex(zwierzeUI, 1);
 
             // Dodajemy Ellipse do Canvas
+
             mapa.Children.Add(zwierzeUI);
 
             // Sprawdzamy, czy Ellipse został dodany do Canvas
+
             if (mapa.Children.Contains(zwierzeUI))
+
             {
+
                 MessageBox.Show("Ellipse został dodany do Canvas.");
+
             }
+
             else
+
             {
+
                 MessageBox.Show("Ellipse nie został dodany do Canvas.");
+
             }
+
         }
 
-        /*private void DodajDoMapy()
+        // Metoda losująca punkt wewnątrz kontynentu
+
+        private Point LosujPunktWewnatrzKontynentu()
+
         {
-            // Ustalamy losową pozycję początkową zwierzęcia na Canvas
-            x = random.Next(300, 1000); // 100 to szerokość zwierzęcia
-            y = random.Next(200, 500); // 100 to wysokość zwierzęcia
 
-            zwierzeUI = new Ellipse
+            Point punkt;
+
+            do
+
             {
-                Width = 300,
-                Height = 300,
-                Fill = Brushes.Black
-            };
 
-            // Ustawiamy początkową pozycję zwierzęcia
-            Canvas.SetLeft(zwierzeUI, 600);
-            Canvas.SetTop(zwierzeUI, 250);
+                // Losujemy punkt w obrębie całego Canvas
 
-            // Ustawiamy najwyższy ZIndex, aby element był zawsze na wierzchu
-            Canvas.SetZIndex(zwierzeUI, 1);
+                double losowyX = random.Next(0, (int)mapa.ActualWidth);
 
-            mapa.Children.Add(zwierzeUI);
+                double losowyY = random.Next(0, (int)mapa.ActualHeight);
 
-            // Inicjalizujemy i uruchamiamy timer (jeśli chcesz, możesz odkomentować kod z timerem)
-            *//*
-            timer = new DispatcherTimer
-            {
-                Interval = TimeSpan.FromSeconds(1) // Ustawiamy co sekundę
-            };
-            timer.Tick += Timer_Tick;
-            timer.Start();
-            *//*
-        }*/
+                punkt = new Point(losowyX, losowyY);
+
+            }
+
+            while (!CzyPunktWewnatrzKontynentu(punkt)); // Powtarzaj, aż znajdziesz punkt wewnątrz kontynentu
+
+            return punkt;
+
+        }
+
+        // Metoda wywoływana co sekundę przez timer
 
         private void Timer_Tick(object sender, EventArgs e)
+
         {
+
+            double noweX = x;
+
+            double noweY = y;
+
             // Generujemy losowy kierunek (góra, dół, lewo, prawo)
+
             int kierunek = random.Next(0, 4); // 0 - prawo, 1 - lewo, 2 - góra, 3 - dół
 
             switch (kierunek)
+
             {
+
                 case 0: // Przemieszczanie w prawo
-                    x += krok;
+
+                    noweX += krok;
+
                     break;
+
                 case 1: // Przemieszczanie w lewo
-                    x -= krok;
+
+                    noweX -= krok;
+
                     break;
+
                 case 2: // Przemieszczanie w górę
-                    y -= krok;
+
+                    noweY -= krok;
+
                     break;
+
                 case 3: // Przemieszczanie w dół
-                    y += krok;
+
+                    noweY += krok;
+
                     break;
+
             }
 
-            // Zapobiegamy wychodzeniu poza granice
-            x = Math.Max(0, Math.Min(x, mapa.ActualWidth - 100)); // 100 to szerokość zwierzęcia
-            y = Math.Max(0, Math.Min(y, mapa.ActualHeight - 100)); // 100 to wysokość zwierzęcia
+            // Sprawdzamy, czy nowa pozycja znajduje się wewnątrz kontynentu
 
-            // Aktualizujemy pozycję zwierzęcia
-            Canvas.SetLeft(zwierzeUI, x);
-            Canvas.SetTop(zwierzeUI, y);
+            if (CzyPunktWewnatrzKontynentu(new Point(noweX, noweY)))
+
+            {
+
+                x = noweX;
+
+                y = noweY;
+
+                // Aktualizujemy pozycję zwierzęcia na Canvas
+
+                Canvas.SetLeft(zwierzeUI, x);
+
+                Canvas.SetTop(zwierzeUI, y);
+
+            }
+
         }
+
+        // Metoda sprawdzająca, czy punkt znajduje się wewnątrz kontynentu
+
+        private bool CzyPunktWewnatrzKontynentu(Point punkt)
+
+        {
+
+            // Pobieramy geometrię z Path
+
+            Geometry geometria = kontynentPath.Data;
+
+            // Sprawdzamy, czy punkt znajduje się wewnątrz geometrii
+
+            return geometria.FillContains(punkt);
+
+        }
+
     }
+
 }

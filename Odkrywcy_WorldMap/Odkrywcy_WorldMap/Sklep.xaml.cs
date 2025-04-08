@@ -1,46 +1,73 @@
 ﻿using Odkrywcy_WorldMap.Klasy;
+
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows;
+
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
+
 using System.Windows.Shapes;
 
 namespace Odkrywcy_WorldMap
+
 {
+
     public partial class Sklep : Page
+
     {
 
         private Frame _mainframe;
+
         private Canvas _canvas;
+
         private Path _path;
-        public Sklep(Frame mainwindow, Canvas canvas, Path path)
+
+        private WorldMap _worldMap; // Dodaj referencję do WorldMap
+
+        public Sklep(Frame mainwindow, Canvas canvas, Path path, WorldMap worldMap)
+
         {
+
             InitializeComponent();
+
             _mainframe = mainwindow;
+
             _canvas = canvas;
+
             _path = path;
+
+            _worldMap = worldMap; // Przypisz referencję
+
         }
 
         private void ExitGame_Click(object sender, RoutedEventArgs e)
+
         {
-            _mainframe.Navigate(new WorldMap(_mainframe));
+
+            // Przejście do strony WorldMap
+
+            _mainframe.Navigate(_worldMap);
+
         }
 
         private void Kup_Zwierze(object sender, RoutedEventArgs e)
+
         {
+
             Button button = (Button)sender;
 
             string n_zwierze = button.Name;
+
+            // Tworzenie nowego zwierzęcia
+
             Zwierze zw = new Zwierze(n_zwierze, _canvas, _path);
+
+            // Przekazanie zwierzęcia do WorldMap
+
+            _worldMap.DodajZwierze(zw); // Dodaj zwierzę do listy w WorldMap
+
         }
+
     }
+
 }
